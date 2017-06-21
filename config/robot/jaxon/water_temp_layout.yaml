@@ -1,0 +1,14 @@
+main:
+  abs ref zmp:
+    legends:
+      - { key: abs_refzmp, id: [1]}
+
+  act cog:
+    legends:
+      - { key: st_originActCog, id: [2] }
+      - { key: st_originRefCog, id: [2] }
+
+  motor temp:
+    legends:
+      - { key: rleg_motor_temp, id: [3]}
+      - { key: lleg_motor_temp, id: [3]}
