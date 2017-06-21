@@ -34,10 +34,14 @@ abs_enc_diff:
     - { log: RobotHardware0_servoState, column: [0-33] }
 
 rmfo_off_rfsensor:
+  func:
+    plot_inverse
   data:
     - { log: rmfo_off_rfsensor, column: [0-5] }
 
 rmfo_off_lfsensor:
+  func:
+    plot_inverse
   data:
     - { log: rmfo_off_lfsensor, column: [0-5] }
 
@@ -57,6 +61,14 @@ rfu_ref_lhsensorOut:
   data:
     - { log: rfu_ref_lhsensorOut, column: [0-5] }
 
+rfu_ref_rfsensorOut:
+  data:
+    - { log: rfu_ref_rfsensorOut, column: [0-5] }
+
+rfu_ref_lfsensorOut:
+  data:
+    - { log: rfu_ref_lfsensorOut, column: [0-5] }
+
 current:
   func: plot_current
   data:
@@ -70,10 +82,15 @@ imu_gyrometer:
   data:
     - { log: RobotHardware0_gyrometer, column: [0,1,2] }
 
-motor_temp:
+rleg_motor_temp:
   func: plot_motor_temp
   data:
     - { log: RobotHardware0_servoState, column: [0,1,2,3,4,5] }
+
+lleg_motor_temp:
+  func: plot_motor_temp
+  data:
+    - { log: RobotHardware0_servoState, column: [6,7,8,9,10,11] }
 
 motor_outer_temp:
   func: plot_motor_outer_temp
@@ -104,7 +121,6 @@ ServoState:
   func: plot_80V
   data:
     - { log: RobotHardware0_servoState, column: [0,1,2,3,4,5] }
-
 
 st_zmp:
   data:

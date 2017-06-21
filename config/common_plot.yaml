@@ -31,6 +31,11 @@ st_originRefZmp:
 st_originNewZmp:
   data:
     - { log: st_originNewZmp, column: [0-2] }
+abs_refzmp:
+  func: plot_add
+  data:
+    - { log: abc_baseTformOut, column: [0-2] }
+    - { log: abc_zmpOut, column: [0-2] }
 # root-link relative zmp
 st_zmp:
   data:
@@ -128,3 +133,36 @@ time:
   func: plot_time
   data:
     - { log: sh_qOut, column: [0]}
+# cp
+st_ActCp:
+  func: plot_cp
+  data:
+    - { log: st_originActCog, column: [0-1] }
+    - { log: st_originActCog, column: [2,2] }
+    - { log: st_originActCogVel, column: [0-1] }
+st_RefCp:
+  func: plot_cp
+  data:
+    - { log: st_originRefCog, column: [0-1] }
+    - { log: st_originRefCog, column: [2,2] }
+    - { log: st_originRefCogVel, column: [0-1] }
+# diff
+cog_diff:
+  func: plot_diff
+  data:
+    - { log: st_originActCog, column: [0-2] }
+    - { log: st_originRefCog, column: [0-2] }
+zmp_diff:
+  func: plot_diff
+  data:
+    - { log: st_originActZmp, column: [0-2] }
+    - { log: st_originRefZmp, column: [0-2] }
+cp_diff:
+    func: plot_cp_diff
+    data:
+    - { log: st_originActCog, column: [0-1] }
+    - { log: st_originActCog, column: [2,2] }
+    - { log: st_originActCogVel, column: [0-1] }
+    - { log: st_originRefCog, column: [0-1] }
+    - { log: st_originRefCog, column: [2,2] }
+    - { log: st_originRefCogVel, column: [0-1] }
