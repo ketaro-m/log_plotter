@@ -7,7 +7,7 @@ from pyqtgraph.graphicsItems.PlotDataItem import PlotDataItem
 
 # set legend forefround white
 def white_foreground_legend_item_paint(legend_item, p, *args):
-    p.setPen(fn.mkPen(0,0,0,255, width = 1)) # r,g,b,alpha
+    # p.setPen(fn.mkPen(0,0,0,255, width = 1)) # r,g,b,alpha
     p.setBrush(fn.mkBrush(255,255,255,255))
     p.drawRect(legend_item.boundingRect())
 
@@ -72,8 +72,8 @@ LegendItem_init_orig = pyqtgraph.graphicsItems.LegendItem.LegendItem.__init__
 def LegendItem_init(self, *args, **kwargs):
     LegendItem_init_orig(self, *args, **kwargs)
     self.layout.setContentsMargins(9.,0.,9.,0.)
-    self.layout.setVerticalSpacing(-5.)
-    self.layout.setHorizontalSpacing(25)
+    self.layout.setVerticalSpacing(-14.)
+    self.layout.setHorizontalSpacing(18)
 
 # justify left for legend label
 from pyqtgraph.graphicsItems.LabelItem import LabelItem

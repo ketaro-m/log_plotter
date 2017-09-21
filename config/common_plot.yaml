@@ -2,6 +2,10 @@
 abc_cogOut:
   data:
     - { log: abc_cogOut, column: [0-2] }
+abc_cogOut_with_offset:
+  func: plot_with_offset
+  data:
+    - { log: abc_cogOut, column: [0-2] }
 st_originActCog:
   data:
     - { log: st_originActCog, column: [0-2] }
@@ -158,11 +162,58 @@ zmp_diff:
     - { log: st_originActZmp, column: [0-2] }
     - { log: st_originRefZmp, column: [0-2] }
 cp_diff:
-    func: plot_cp_diff
-    data:
+  func: plot_cp_diff
+  data:
     - { log: st_originActCog, column: [0-1] }
     - { log: st_originActCog, column: [2,2] }
     - { log: st_originActCogVel, column: [0-1] }
     - { log: st_originRefCog, column: [0-1] }
     - { log: st_originRefCog, column: [2,2] }
     - { log: st_originRefCogVel, column: [0-1] }
+# ee pos
+eePosX:
+  data:
+    - { log: eePosX, column: [0-3] }
+eePosY:
+  data:
+    - { log: eePosY, column: [0-3] }
+# sbp
+cog_with_sbp_x:
+  func: plot_cog_with_sbp
+  data:
+    - { log: abc_cogOut, column: [0] }
+    - { log: eePosX, column: [0]}
+    - { log: eePosX, column: [1]}
+    - { log: rfu_ref_rfsensorOut, column: [2] }
+    - { log: rfu_ref_lfsensorOut, column: [2] }
+
+cog_with_sbp_y:
+  func: plot_cog_with_sbp
+  data:
+    - { log: abc_cogOut, column: [1] }
+    - { log: eePosY, column: [0]}
+    - { log: eePosY, column: [1]}
+    - { log: rfu_ref_rfsensorOut, column: [2] }
+    - { log: rfu_ref_lfsensorOut, column: [2] }
+
+sbp_cog_offset_x:
+  func: plot_sbp_cog_offset
+  data:
+    - { log: abc_cogOut, column: [0] }
+    - { log: eePosX, column: [0]}
+    - { log: eePosX, column: [1]}
+    - { log: rfu_ref_rfsensorOut, column: [2] }
+    - { log: rfu_ref_lfsensorOut, column: [2] }
+
+sbp_cog_offset_y:
+  func: plot_sbp_cog_offset
+  data:
+    - { log: abc_cogOut, column: [1] }
+    - { log: eePosY, column: [0]}
+    - { log: eePosY, column: [1]}
+    - { log: rfu_ref_rfsensorOut, column: [2] }
+    - { log: rfu_ref_lfsensorOut, column: [2] }
+
+# temp:
+  # data:
+  #   - { log:temp, culumn: [0] }
