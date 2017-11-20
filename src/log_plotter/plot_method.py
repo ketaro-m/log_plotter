@@ -17,8 +17,8 @@ class PlotMethod(object):
     color_list = ["9400D3", "009E73", "56B4E9", "E69F00", "F0E442", "0072B2", "E51E10", "0000FF"]
     linetypes = {
         "color": color_list * 2,
-        # "style": [pyqtgraph.QtCore.Qt.SolidLine] * len(color_list) + [pyqtgraph.QtCore.Qt.DotLine] * len(color_list)
-        "style": [pyqtgraph.QtCore.Qt.SolidLine] + [pyqtgraph.QtCore.Qt.DotLine] + [pyqtgraph.QtCore.Qt.DashLine] + [pyqtgraph.QtCore.Qt.DashDotLine]
+        "style": [pyqtgraph.QtCore.Qt.SolidLine] * len(color_list) + [pyqtgraph.QtCore.Qt.DotLine] * len(color_list)
+        # "style": [pyqtgraph.QtCore.Qt.SolidLine] + [pyqtgraph.QtCore.Qt.DotLine] + [pyqtgraph.QtCore.Qt.DashLine] + [pyqtgraph.QtCore.Qt.DashDotLine]
     }
 
 

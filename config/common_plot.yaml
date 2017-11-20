@@ -214,6 +214,10 @@ sbp_cog_offset_y:
     - { log: rfu_ref_rfsensorOut, column: [2] }
     - { log: rfu_ref_lfsensorOut, column: [2] }
 
-# temp:
-  # data:
-  #   - { log:temp, culumn: [0] }
+# rleg_current:
+#   data:
+#     - { log: rleg_current, column: [0-5] }
+
+# lleg_current:
+#   data:
+#     - { log: lleg_current, column: [0-5] }

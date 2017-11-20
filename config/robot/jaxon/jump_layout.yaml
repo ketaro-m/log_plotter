@@ -1,9 +1,9 @@
 main:
-  ref/new/act zmp:
-    legends:
-      - { key: st_originRefZmp, id: [0-1] }
-      - { key: st_originNewZmp, id: [0-1] }
-      - { key: st_originActZmp, id: [0-1] }
+  # ref/new/act zmp:
+  #   legends:
+  #     - { key: st_originRefZmp, id: [0-1] }
+  #     - { key: st_originNewZmp, id: [0-1] }
+  #     - { key: st_originActZmp, id: [0-1] }
 
   ref/act z rforce:
     legends:
@@ -29,19 +29,21 @@ main:
     legends:
       - { key: st_actBaseRpy, id: [0-1] }
 
-  ref cog:
-    legends:
-      - { key: st_originRefCog, id: [0,2]}
+  # ref/act cog (0,2):
+  #   legends:
+  #     - { key: st_originRefCog, id: [0,2]}
+  #     - { key: st_originActCog, id: [0,2]}
 
-  ref cogvel:
-    legends:
-      - { key: st_originRefCogVel, id: [0,2]}
+  # ref/act cogvel (0,2):
+  #   legends:
+  #     - { key: st_originRefCogVel, id: [0,2]}
+  #     - { key: st_originActCogVel, id: [0,2]}
 
   contact:
     legends:
       - { key: abc_contactStates, id: [0-1]}
 
-  rleg torque w/o ankle:
+  rleg torque:
     legends:
       - { key: torque, id: [0]}
       - { key: torque, id: [1]}
@@ -51,7 +53,7 @@ main:
       - { key: torque, id: [5]}
     newline: false
 
-  lleg torque w/o ankle:
+  lleg torque:
     legends:
       - { key: torque, id: [6]}
       - { key: torque, id: [7]}
