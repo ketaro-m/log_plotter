@@ -1,0 +1,57 @@
+main:
+  12V:
+    legends:
+      - { key: 12V, id: [0-11] }
+
+  80V:
+    legends:
+      - { key: 80V, id: [0-11] }
+
+  # ServoState:
+  #   legends:
+  #     - { key: ServoState, id: [0-5] }
+
+  # rleg_joint_angle:
+  #   legends:
+  #     - { key: sh_qOut, id: [0-5] }
+  #     - { key: abc_q, id: [0-5] }
+  #     - { key: st_q, id: [0-5] }
+  #     - { key: RobotHardware0_q, id: [0-5] }
+
+  # lleg_joint_angle:
+  #   legends:
+  #     - { key: sh_qOut, id: [6-11] }
+  #     - { key: abc_q, id: [6-11] }
+  #     - { key: st_q, id: [6-11] }
+  #     - { key: RobotHardware0_q, id: [6-11] }
+
+  tracking:
+    legends:
+      - {key: rh_st_diff, id: [0-11] }
+      - {key: abs_enc_diff, id: [0-11] }
+
+  # current:
+  #   legends:
+  #     - { key: current, id: [0-11] }
+
+  # imu_gsensor:
+  #   legends:
+  #     - { key: imu_gsensor, id: [0], label: x }
+  #     - { key: imu_gsensor, id: [1], label: y }
+  #     - { key: imu_gsensor, id: [2], label: z }
+  #   newline: False
+
+  # imu_gyrometer:
+  #   legends:
+  #     - { key: imu_gyrometer, id: [0], label: x }
+  #     - { key: imu_gyrometer, id: [1], label: y }
+  #     - { key: imu_gyrometer, id: [2], label: z }
+
+  # temperature:
+  #   legends:
+  #     - { key: motor_temp, id: [0-11] }
+  #     - { key: motor_outer_temp, id: [0-11] }
+
+  # watt:
+  #   legends:
+  #     - { key: watt, id: [0-11] }

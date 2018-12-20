@@ -221,3 +221,7 @@ sbp_cog_offset_y:
 # lleg_current:
 #   data:
 #     - { log: lleg_current, column: [0-5] }
+
+tmp:
+  data:
+    - { log: abc_tmp, column: [0-5] }

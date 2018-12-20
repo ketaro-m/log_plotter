@@ -1,33 +1,42 @@
 main:
-  # ref/new/act zmp:
-  #   legends:
-  #     - { key: st_originRefZmp, id: [0-1] }
-  #     - { key: st_originNewZmp, id: [0-1] }
-  #     - { key: st_originActZmp, id: [0-1] }
+  ref/new/act zmp:
+    legends:
+      - { key: st_originRefZmp, id: [0-1] }
+      - { key: st_originNewZmp, id: [0-1] }
+      - { key: st_originActZmp, id: [0-1] }
 
   ref/act z rforce:
     legends:
-      - { key: abc_rfsensor, id: [2] }
+      # - { key: abc_rfsensor, id: [2] }
       - { key: rmfo_off_rfsensor, id: [2] }
       - { key: st_ref_rfsensor, id: [2] }
     newline: false
 
   ref/act z lforce:
     legends:
-      - { key: abc_lfsensor, id: [2] }
+      # - { key: abc_lfsensor, id: [2] }
       - { key: rmfo_off_lfsensor, id: [2] }
       - { key: st_ref_lfsensor, id: [2] }
 
-  # ref/act pitch moment:
-  #   legends:
-  #     - { key: rmfo_off_rfsensor, id: [4] }
-  #     - { key: st_ref_rfsensor, id: [4] }
-  #     - { key: rmfo_off_lfsensor, id: [4] }
-  #     - { key: st_ref_lfsensor, id: [4] }
-
-  act base rpy:
+  ref/act rmoment:
     legends:
-      - { key: st_actBaseRpy, id: [0-1] }
+      - { key: rmfo_off_rfsensor, id: [3] }
+      - { key: rmfo_off_rfsensor, id: [4] }
+      - { key: st_ref_rfsensor, id: [3] }
+      - { key: st_ref_rfsensor, id: [4] }
+    newline: false
+
+  ref/act lmoment:
+    legends:
+      - { key: rmfo_off_lfsensor, id: [3] }
+      - { key: rmfo_off_lfsensor, id: [4] }
+      - { key: st_ref_lfsensor, id: [3] }
+      - { key: st_ref_lfsensor, id: [4] }
+
+
+  # act base rpy:
+  #   legends:
+  #     - { key: st_actBaseRpy, id: [0-1] }
 
   # ref/act cog (0,2):
   #   legends:
