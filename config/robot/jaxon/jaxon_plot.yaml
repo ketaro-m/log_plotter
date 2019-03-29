@@ -5,7 +5,10 @@ sh_qOut:
   func: plot_rad2deg
   data:
     - { log: sh_qOut, column: [0-33] }
-
+es_q:
+  func: plot_rad2deg
+  data:
+    - { log: es_q, column: [0-33] }
 abc_q:
   func: plot_rad2deg
   data:
@@ -118,7 +121,7 @@ torque:
 ServoState:
   func: plot_servostate
   data:
-    - { log: RobotHardware0_servoState, column: [0,1,2,3,4,5] }
+    - { log: RobotHardware0_servoState, column: [0-11] }
 abc_rfsensor:
   data:
     - { log: abc_rfsensor, column: [0,1,2,3,4,5] }

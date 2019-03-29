@@ -224,4 +224,13 @@ sbp_cog_offset_y:
 
 tmp:
   data:
-    - { log: abc_tmp, column: [0-5] }
+    - { log: abc_tmp, column: [0-30] }
+
+swing_comp:
+  func: plot_comp
+  data:
+    -  { log: abc_allEEComp, column: [0-11] }
+
+forcegage:
+  data:
+    - { log: forcegage2, column: [0] }

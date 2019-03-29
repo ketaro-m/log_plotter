@@ -30,9 +30,9 @@ main:
       - {key: rh_st_diff, id: [0-11] }
       - {key: abs_enc_diff, id: [0-11] }
 
-  # current:
-  #   legends:
-  #     - { key: current, id: [0-11] }
+  current:
+    legends:
+      - { key: current, id: [0-11] }
 
   # imu_gsensor:
   #   legends:

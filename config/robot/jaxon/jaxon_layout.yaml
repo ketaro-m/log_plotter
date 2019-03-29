@@ -18,8 +18,8 @@ main:
 
   tracking:
     legends:
-      - {key: rh_st_diff, id: [0-5] }
-      - {key: abs_enc_diff, id: [0-5] }
+      - {key: rh_st_diff, id: [0-11] }
+      - {key: abs_enc_diff, id: [0-11] }
 
   right_foot_force:
     legends:
@@ -59,7 +59,7 @@ main:
 
   ServoState:
     legends:
-      - { key: ServoState, id: [0-5] }
+      - { key: ServoState, id: [0-11] }
 
   12V:
     legends:

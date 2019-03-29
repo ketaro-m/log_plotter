@@ -1,0 +1,96 @@
+main:
+  # abs ref cog/zmp x:
+  #   legends:
+  #     - { key: tmp, id: [0]} # ref_zmp
+  #     - { key: tmp, id: [2]} # ref_dcm
+  #     - { key: tmp, id: [4]} # new_ref_zmp
+  #     - { key: tmp, id: [6]} # new_ref_cp
+  #     - { key: tmp, id: [8]} # act_cp
+  #     - { key: abc_cogOut, id: [0]} # new_ref_cog
+  #   newline: false
+
+  abs ref cog/zmp y:
+    legends:
+      - { key: tmp, id: [1]} # ref_zmp
+      # - { key: tmp, id: [3]} # ref_dcm
+      - { key: tmp, id: [5]} # new_ref_zmp
+      - { key: tmp, id: [7]} # new_act_cp
+      - { key: abc_cogOut, id: [1]} # new_ref_cog
+    xRange: {min: 0, max: 12}
+    yRange: {min: -0.12, max: 0.12}
+    left_label: "y [m]"
+    bottom_label: "Time [s]"
+    width: 245.71811pt
+    height: 150pt
+
+  # flywheel:
+  #   legends:
+  #     - { key: tmp, id: [12]} # flywheel_tau r
+  #     - { key: tmp, id: [13]} # flywheel_tau p
+  #   newline: false
+
+  # momentum:
+  #   legends:
+  #     - { key: tmp, id: [15]} # momentum r
+  #     - { key: tmp, id: [16]} # momentum r
+  #   newline: false
+
+  # step time:
+  #   legends:
+  #     - { key: tmp, id: [10] } # double_time
+  #     - { key: tmp, id: [11] } # time
+
+  # act/ref force:
+  #   legends:
+  #     - { key: rmfo_off_rfsensor, id: [0-2] }
+  #     - { key: rmfo_off_lfsensor, id: [0-2] }
+
+  # rleg swing comp:
+  #   legends:
+  #     - { key: swing_comp, id: [0-5] }
+
+  # lleg swing comp:
+  #   legends:
+  #     - { key: swing_comp, id: [6-11] }
+
+  # falling direction:
+  #   legends:
+  #     - { key: tmp, id: [14] }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  # zmp:
+  #   legends:
+  #     - { key: st_tmpCogValues, id: [0,1]}
+
+  # tmp_cog2:
+  #   legends:
+  #     - { key: st_tmpCogValues, id: [3,4]}
+
+  # cotact_states:
+  #   legends:
+  #     - { key: st_tmpCogValues, id: [6]}
+  #     - { key: st_tmpCogValues, id: [7]}
+  #     - { key: st_tmpCogValues, id: [8]}
+  #   newline: false
+  # cogvel y:
+  #   legends:
+  #     - { key: st_tmpCogValues, id: [5]}
+
+  # tmp_act_zmp:
+  #   legends:
+  #     - { key: st_tmpCogValues, id: [9,10]}
+  #     - { key: st_zmp, id: [0,1]}
+

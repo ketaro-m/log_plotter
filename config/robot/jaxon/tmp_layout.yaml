@@ -1,25 +1,35 @@
 main:
-  abs ref cog/zmp:
-    legends:
-      # - { key: abs_refzmp, id: [0]}
-      - { key: abs_refzmp, id: [0]}
-      # - { key: abs_refzmp, id: [2]}
-      - { key: tmp, id: [0]}
-      - { key: tmp, id: [2]}
-      - { key: tmp, id: [3]}
-      - { key: tmp, id: [4]}
-      - { key: abc_cogOut, id: [0]}
+  # abs ref cog/zmp:
+  #   legends:
+  #     # - { key: abs_refzmp, id: [0]}
+  #     - { key: abs_refzmp, id: [0]}
+  #     # - { key: abs_refzmp, id: [2]}
+  #     - { key: tmp, id: [0]}
+  #     - { key: tmp, id: [2]}
+  #     - { key: tmp, id: [3]}
+  #     - { key: tmp, id: [4]}
+  #     - { key: abc_cogOut, id: [0]}
+  #   newline: false
 
-  abs ref cog/zmp2:
+  # abs ref cog/zmp2:
+  #   legends:
+  #     # - { key: abs_refzmp, id: [0]}
+  #     - { key: abs_refzmp, id: [1]}
+  #     # - { key: abs_refzmp, id: [2]}
+  #     - { key: tmp, id: [1]}
+  #     - { key: tmp, id: [2]}
+  #     - { key: tmp, id: [3]}
+  #     - { key: tmp, id: [5]}
+  #     - { key: abc_cogOut, id: [1]}
+
+  act/ref force:
     legends:
-      # - { key: abs_refzmp, id: [0]}
-      - { key: abs_refzmp, id: [1]}
-      # - { key: abs_refzmp, id: [2]}
-      - { key: tmp, id: [1]}
-      - { key: tmp, id: [2]}
-      - { key: tmp, id: [3]}
-      - { key: tmp, id: [5]}
-      - { key: abc_cogOut, id: [1]}
+      - { key: rmfo_off_rfsensor, id: [0-2] }
+      - { key: rmfo_off_lfsensor, id: [0-2] }
+      - { key: st_ref_rfsensor, id: [0-2] }
+      - { key: st_ref_lfsensor, id: [0-2] }
+      - { key: rfu_ref_rfsensorOut, id: [0-2] }
+      - { key: rfu_ref_lfsensorOut, id: [0-2] }
 
   # zmp:
   #   legends:
@@ -44,3 +54,15 @@ main:
   #     - { key: st_tmpCogValues, id: [9,10]}
   #     - { key: st_zmp, id: [0,1]}
 
+  abs ref cog/zmp:
+    legends:
+      - { key: abc_cogOut, id: [0-2]} # new_ref_cog
+      - { key: abs_refzmp, id: [0-2]}
+
+  act/ref cog zmp:
+    legends:
+      - { key: st_originActCog, id: [0-2]}
+      - { key: st_originRefCog, id: [0-2]}
+      - { key: st_originActZmp, id: [0-2]}
+      - { key: st_originRefZmp, id: [0-2]}
+      - { key: st_originNewZmp, id: [0-2]}
