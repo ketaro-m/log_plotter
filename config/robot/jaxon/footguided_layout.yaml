@@ -6,6 +6,8 @@ main:
       - { key: tmp, id: [4]} # new_ref_zmp
       - { key: tmp, id: [6]} # new_ref_cp
       - { key: tmp, id: [8]} # act_cp
+      - { key: tmp, id: [15]} # non_filterzmp
+      - { key: tmp, id: [19]} # proceed_zmp
       - { key: abc_cogOut, id: [0]} # new_ref_cog
     newline: false
 
@@ -16,6 +18,8 @@ main:
       - { key: tmp, id: [5]} # new_ref_zmp
       - { key: tmp, id: [7]} # new_act_cp
       - { key: tmp, id: [9]} # act_cp
+      - { key: tmp, id: [16]} # non_filterzmp
+      - { key: tmp, id: [20]} # proceed_zmp
       - { key: abc_cogOut, id: [1]} # new_ref_cog
 
   flywheel:
@@ -26,8 +30,8 @@ main:
 
   momentum:
     legends:
-      - { key: tmp, id: [15]} # momentum r
-      - { key: tmp, id: [16]} # momentum r
+      - { key: tmp, id: [17]} # momentum r
+      - { key: tmp, id: [18]} # momentum r
     newline: false
 
   step time:
