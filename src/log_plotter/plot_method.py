@@ -147,6 +147,13 @@ class PlotMethod(object):
         plot_item.plot(times, data, pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=1.5, style=PlotMethod.linetypes["style"][i]), name=key)
 
     @staticmethod
+    def plot_add_const(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
+        data_summand = data_dict[logs[0]][:, log_cols[0]]
+        data_addend = -0.045873
+        data = data_summand + data_addend
+        plot_item.plot(times, data, pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=1.5, style=PlotMethod.linetypes["style"][i]), name=key)
+
+    @staticmethod
     def plot_cp(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
         cogx = data_dict[logs[0]][:, log_cols[0]] # cog x
         height = data_dict[logs[1]][:, log_cols[1]] # cog height

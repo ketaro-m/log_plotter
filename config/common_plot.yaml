@@ -234,3 +234,9 @@ swing_comp:
 forcegage:
   data:
     - { log: forcegage2, column: [0] }
+
+tmp_add_const:
+  func: plot_add_const
+  data:
+    - { log: abc_tmp, column: [0-30] }
+    - { log: abc_tmp, column: [0-30] }
