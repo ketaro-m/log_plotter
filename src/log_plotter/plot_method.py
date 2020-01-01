@@ -164,6 +164,17 @@ class PlotMethod(object):
         plot_item.plot(times, data, pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=1.5, style=PlotMethod.linetypes["style"][i]), name=key)
 
     @staticmethod
+    def plot_cp_add_const(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
+        cogx = data_dict[logs[0]][:, log_cols[0]] # cog x
+        height = data_dict[logs[1]][:, log_cols[1]] # cog height
+        vel = data_dict[logs[2]][:, log_cols[2]]    # cog velocity
+        g = 9.80665
+        omega = numpy.sqrt(g / height)
+        data_addend = -0.0184
+        data = vel / omega + cogx + data_addend
+        plot_item.plot(times, data, pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=1.5, style=PlotMethod.linetypes["style"][i]), name=key)
+
+    @staticmethod
     def plot_cp_diff(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
         actcogx = data_dict[logs[0]][:, log_cols[0]] # cog x
         refcogx = data_dict[logs[3]][:, log_cols[3]] # cog x

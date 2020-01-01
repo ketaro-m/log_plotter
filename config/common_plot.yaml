@@ -150,6 +150,18 @@ st_RefCp:
     - { log: st_originRefCog, column: [0-1] }
     - { log: st_originRefCog, column: [2,2] }
     - { log: st_originRefCogVel, column: [0-1] }
+st_ActCp_add_const:
+  func: plot_cp_add_const
+  data:
+    - { log: st_originActCog, column: [0-1] }
+    - { log: st_originActCog, column: [2,2] }
+    - { log: st_originActCogVel, column: [0-1] }
+st_RefCp_add_const:
+  func: plot_cp_add_const
+  data:
+    - { log: st_originRefCog, column: [0-1] }
+    - { log: st_originRefCog, column: [2,2] }
+    - { log: st_originRefCogVel, column: [0-1] }
 # diff
 cog_diff:
   func: plot_diff
