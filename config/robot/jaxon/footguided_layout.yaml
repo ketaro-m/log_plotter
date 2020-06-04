@@ -26,8 +26,8 @@ main:
 
   act/ref cog velocity:
     legends:
-      - { key: st_originActCogVel, id: [0-2]}
-      - { key: st_originRefCogVel, id: [0-2]}
+      - { key: abc_originActCogVel, id: [0-2]}
+      - { key: abc_originRefCogVel, id: [0-2]}
 
   flywheel:
     legends:
@@ -51,13 +51,21 @@ main:
       - { key: rmfo_off_rfsensor, id: [0-2] }
       - { key: rmfo_off_lfsensor, id: [0-2] }
 
-  rleg swing comp:
+  ST cog/zmp x:
     legends:
-      - { key: swing_comp, id: [0-5] }
+      - { key: abc_originActCog, id: [0]}
+      - { key: abc_originRefCog, id: [0]}
+      - { key: abc_originActZmp, id: [0]}
+      - { key: abc_originRefZmp, id: [0]}
+      - { key: abc_originNewZmp, id: [0]}
 
-  lleg swing comp:
-    legends:
-      - { key: swing_comp, id: [6-11] }
+  # rleg swing comp:
+  #   legends:
+  #     - { key: swing_comp, id: [0-5] }
+
+  # lleg swing comp:
+  #   legends:
+  #     - { key: swing_comp, id: [6-11] }
 
   # rarm swing comp:
   #   legends:
@@ -67,55 +75,19 @@ main:
   #   legends:
   #     - { key: swing_comp, id: [18-23] }
 
-  falling direction:
-    legends:
-      - { key: tmp, id: [14] }
-    newline: false
-
-  dc fx:
-    legends:
-      # - { key: tmp, id: [15], label: "raw dc fx"}
-      - { key: tmp, id: [17], label: "filterd dc fx"}
-    newline: false
-
-  dc fy:
-    legends:
-      # - { key: tmp, id: [16], label: "raw dc fy"}
-      - { key: tmp, id: [18], label: "filterd dc fy"}
-    newline: false
-
-
-
-
-
-
-
-
-
-
-
-
-
-  # zmp:
+  # falling direction:
   #   legends:
-  #     - { key: st_tmpCogValues, id: [0,1]}
-
-  # tmp_cog2:
-  #   legends:
-  #     - { key: st_tmpCogValues, id: [3,4]}
-
-  # cotact_states:
-  #   legends:
-  #     - { key: st_tmpCogValues, id: [6]}
-  #     - { key: st_tmpCogValues, id: [7]}
-  #     - { key: st_tmpCogValues, id: [8]}
+  #     - { key: tmp, id: [14] }
   #   newline: false
-  # cogvel y:
-  #   legends:
-  #     - { key: st_tmpCogValues, id: [5]}
 
-  # tmp_act_zmp:
+  # dc fx:
   #   legends:
-  #     - { key: st_tmpCogValues, id: [9,10]}
-  #     - { key: st_zmp, id: [0,1]}
+  #     # - { key: tmp, id: [15], label: "raw dc fx"}
+  #     - { key: tmp, id: [17], label: "filterd dc fx"}
+  #   newline: false
 
+  # dc fy:
+  #   legends:
+  #     # - { key: tmp, id: [16], label: "raw dc fy"}
+  #     - { key: tmp, id: [18], label: "filterd dc fy"}
+  #   newline: false

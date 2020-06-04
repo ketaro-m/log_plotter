@@ -14,6 +14,11 @@ abc_q:
   data:
     - { log: abc_q, column: [0-33] }
 
+abc_qAbc:
+  func: plot_rad2deg
+  data:
+    - { log: abc_qAbc, column: [0-33] }
+
 st_q:
   func: plot_rad2deg
   data:

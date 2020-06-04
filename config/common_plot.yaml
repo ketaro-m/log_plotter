@@ -9,14 +9,26 @@ abc_cogOut_with_offset:
 st_originActCog:
   data:
     - { log: st_originActCog, column: [0-2] }
+abc_originActCog:
+  data:
+    - { log: abc_originActCog, column: [0-2] }
 st_originRefCog:
   data:
     - { log: st_originRefCog, column: [0-2] }
+abc_originRefCog:
+  data:
+    - { log: abc_originRefCog, column: [0-2] }
 ## cog velocity
 st_originActCogVel:
   data:
     - { log: st_originActCogVel, column: [0-2] }
 st_originRefCogVel:
+  data:
+    - { log: st_originRefCogVel, column: [0-2] }
+abc_originActCogVel:
+  data:
+    - { log: st_originActCogVel, column: [0-2] }
+abc_originRefCogVel:
   data:
     - { log: st_originRefCogVel, column: [0-2] }
 ## zmp
@@ -29,12 +41,21 @@ abc_refZmp:
 st_originActZmp:
   data:
     - { log: st_originActZmp, column: [0-2] }
+abc_originActZmp:
+  data:
+    - { log: abc_originActZmp, column: [0-2] }
 st_originRefZmp:
   data:
     - { log: st_originRefZmp, column: [0-2] }
+abc_originRefZmp:
+  data:
+    - { log: abc_originRefZmp, column: [0-2] }
 st_originNewZmp:
   data:
     - { log: st_originNewZmp, column: [0-2] }
+abc_originNewZmp:
+  data:
+    - { log: abc_originNewZmp, column: [0-2] }
 abs_refzmp:
   func: plot_add
   data:
