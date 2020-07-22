@@ -1,0 +1,75 @@
+main:
+  rleg cylinder:
+    legends:
+      - { key: RobotHardware0_q_lin, id: [32], label: crotch-inner }
+      - { key: RobotHardware0_q_lin, id: [33], label: crotch-outer }
+      - { key: RobotHardware0_q_lin, id: [34], label: knee }
+      - { key: RobotHardware0_q_lin, id: [35], label: ankle-inner }
+      - { key: RobotHardware0_q_lin, id: [36], label: ankle-outer }
+      - { key: atc_q, id: [32], label: ref crotch-inner}
+      - { key: atc_q, id: [33], label: ref crotch-outer}
+      - { key: atc_q, id: [34], label: ref knee }
+      - { key: atc_q, id: [35], label: ref ankle-inner }
+      - { key: atc_q, id: [36], label: ref ankle-outer }
+
+  lleg cylinder:
+    legends:
+      - { key: RobotHardware0_q_lin, id: [37], label: crotch-inner }
+      - { key: RobotHardware0_q_lin, id: [38], label: crotch-outer }
+      - { key: RobotHardware0_q_lin, id: [39], label: knee }
+      - { key: RobotHardware0_q_lin, id: [40], label: ankle-inner }
+      - { key: RobotHardware0_q_lin, id: [41], label: ankle-outer }
+      - { key: atc_q, id: [37], label: ref crotch-inner}
+      - { key: atc_q, id: [38], label: ref crotch-outer}
+      - { key: atc_q, id: [39], label: ref knee }
+      - { key: atc_q, id: [40], label: ref ankle-inner }
+      - { key: atc_q, id: [41], label: ref ankle-outer }
+
+  leg cylinder speed:
+    legends:
+      - { key: RobotHardware0_dq_lin, id: [32], label: R crotch-inner }
+      - { key: RobotHardware0_dq_lin, id: [33], label: R crotch-outer }
+      - { key: RobotHardware0_dq_lin, id: [34], label: R knee }
+      - { key: RobotHardware0_dq_lin, id: [35], label: R ankle-inner }
+      - { key: RobotHardware0_dq_lin, id: [36], label: R ankle-outer }
+      - { key: RobotHardware0_dq_lin, id: [37], label: L crotch-inner }
+      - { key: RobotHardware0_dq_lin, id: [38], label: L crotch-outer }
+      - { key: RobotHardware0_dq_lin, id: [39], label: L knee }
+      - { key: RobotHardware0_dq_lin, id: [40], label: L ankle-inner }
+      - { key: RobotHardware0_dq_lin, id: [41], label: L ankle-outer }
+
+  rarm cylinder:
+    legends:
+      - { key: RobotHardware0_q_lin, id: [44], label: elbow }
+      - { key: RobotHardware0_q_lin, id: [46], label: wrist-inner }
+      - { key: RobotHardware0_q_lin, id: [47], label: wrist-outer }
+      - { key: atc_q, id: [44], label: ref elbow }
+      - { key: atc_q, id: [46], label: ref wrist-inner }
+      - { key: atc_q, id: [47], label: ref wrist-outer }
+
+  larm cylinder:
+    legends:
+      - { key: RobotHardware0_q_lin, id: [45], label: elbow }
+      - { key: RobotHardware0_q_lin, id: [48], label: wrist-inner }
+      - { key: RobotHardware0_q_lin, id: [49], label: wrist-outer }
+      - { key: atc_q, id: [45], label: ref elbow }
+      - { key: atc_q, id: [48], label: ref wrist-inner }
+      - { key: atc_q, id: [49], label: ref wrist-outer }
+
+  torso cylinder:
+    legends:
+      - { key: RobotHardware0_q_lin, id: [42], label: waist-right }
+      - { key: RobotHardware0_q_lin, id: [43], label: waist-left }
+      - { key: atc_q, id: [42], label: ref waist-right }
+      - { key: atc_q, id: [43], label: ref waist-left }
+
+  arm/torso cyliner speed:
+    legends:
+      - { key: RobotHardware0_dq_lin, id: [44], label: vel R elbow }
+      - { key: RobotHardware0_dq_lin, id: [46], label: vel R wrist-inner }
+      - { key: RobotHardware0_dq_lin, id: [47], label: vel R wrist-outer }
+      - { key: RobotHardware0_dq_lin, id: [45], label: vel L elbow }
+      - { key: RobotHardware0_dq_lin, id: [48], label: vel L wrist-inner }
+      - { key: RobotHardware0_dq_lin, id: [49], label: vel L wrist-outer }
+      - { key: RobotHardware0_dq_lin, id: [42], label: waist-right }
+      - { key: RobotHardware0_dq_lin, id: [43], label: waist-left }

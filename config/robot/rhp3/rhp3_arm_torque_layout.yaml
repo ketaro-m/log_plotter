@@ -1,0 +1,46 @@
+main:
+  larm current:
+    legends:
+      - { key: RobotHardware0_tau, id: [45], label: elbow }
+      - { key: RobotHardware0_tau, id: [48], label: wrist-inner }
+      - { key: RobotHardware0_tau, id: [49], label: wrist-outer }
+      - { key: RobotHardware0_tau, id: [24], label: shoulder roll/pitch}
+      - { key: RobotHardware0_tau, id: [25], label: shoulder roll/pitch}
+      - { key: RobotHardware0_tau, id: [26], label: shoulder yaw }
+  larm torque:
+    legends:
+      - { key: cta_tau, id: [24], label: shoulder pitch }
+      - { key: cta_tau, id: [25], label: shoulder roll }
+      - { key: cta_tau, id: [26], label: shoulder yaw }
+      - { key: cta_tau, id: [27], label: elbow }
+      - { key: cta_tau, id: [28], label: wrist roll}
+      - { key: cta_tau, id: [29], label: wrist pitch }
+      - { key: cta_tau, id: [30], label: wrist yaw }
+  # larm virtual force:
+  #   legends:
+  #     - { key: vs_vlhsensor, id: [0], label: vlhsensor x }
+  #     - { key: vs_vlhsensor, id: [1], label: vlhsensor y }
+  #     - { key: vs_vlhsensor, id: [2], label: vlhsensor z }
+  rarm current:
+    legends:
+      - { key: RobotHardware0_tau, id: [44], label: elbow }
+      - { key: RobotHardware0_tau, id: [46], label: wrist-inner }
+      - { key: RobotHardware0_tau, id: [47], label: wrist-outer }
+      - { key: RobotHardware0_tau, id: [16], label: shoulder roll/pitch}
+      - { key: RobotHardware0_tau, id: [17], label: shoulder roll/pitch}
+      - { key: RobotHardware0_tau, id: [18], label: shoulder yaw }
+  rarm torque:
+    legends:
+      - { key: cta_tau, id: [16], label: shoulder pitch }
+      - { key: cta_tau, id: [17], label: shoulder roll }
+      - { key: cta_tau, id: [18], label: shoulder yaw }
+      - { key: cta_tau, id: [19], label: elbow }
+      - { key: cta_tau, id: [20], label: wrist roll}
+      - { key: cta_tau, id: [21], label: wrist pitch }
+      - { key: cta_tau, id: [22], label: wrist yaw }
+  # rarm virtual force:
+  #   legends:
+  #     - { key: vs_vrhsensor, id: [0], label: vrhsensor x }
+  #     - { key: vs_vrhsensor, id: [1], label: vrhsensor y }
+  #     - { key: vs_vrhsensor, id: [2], label: vrhsensor z }
+

@@ -1,0 +1,54 @@
+main:
+  # lleg current:
+  #   legends:
+  #     - { key: RobotHardware0_tau, id: [0], label: crotch-yaw }
+  #     - { key: RobotHardware0_tau, id: [37], label: crotch-inner }
+  #     - { key: RobotHardware0_tau, id: [38], label: crotch-outer }
+  #     - { key: RobotHardware0_tau, id: [39], label: knee }
+  #     - { key: RobotHardware0_tau, id: [40], label: ankle-inner }
+  #     - { key: RobotHardware0_tau, id: [41], label: ankle-outer }
+  # lleg torque:
+  #   legends:
+  #     - { key: cta_tau, id: [0], label: crotch yaw }
+  #     - { key: cta_tau, id: [1], label: crotch pitch }
+  #     - { key: cta_tau, id: [2], label: crotch roll }
+  #     - { key: cta_tau, id: [3], label: knee }
+  #     - { key: cta_tau, id: [4], label: ankle roll}
+  #     - { key: cta_tau, id: [5], label: ankle pitch }
+  # rleg current:
+  #   legends:
+  #     - { key: RobotHardware0_tau, id: [8], label: crotch-yaw }
+  #     - { key: RobotHardware0_tau, id: [32], label: crotch-inner }
+  #     - { key: RobotHardware0_tau, id: [33], label: crotch-outer }
+  #     - { key: RobotHardware0_tau, id: [34], label: knee }
+  #     - { key: RobotHardware0_tau, id: [35], label: ankle-inner }
+  #     - { key: RobotHardware0_tau, id: [36], label: ankle-outer }
+  # rleg torque:
+  #   legends:
+  #     - { key: cta_tau, id: [8], label: crotch yaw }
+  #     - { key: cta_tau, id: [9], label: crotch pitch }
+  #     - { key: cta_tau, id: [10], label: crotch roll }
+  #     - { key: cta_tau, id: [11], label: knee }
+  #     - { key: cta_tau, id: [12], label: ankle roll}
+  #     - { key: cta_tau, id: [13], label: ankle pitch }
+  rarm torque:
+    legends:
+      - { key: cta_tau, id: [24], label: r sholder p }
+      - { key: cta_tau, id: [25], label: r shoulder r }
+      - { key: cta_tau, id: [26], label: r shoulder y }
+      - { key: cta_tau, id: [27], label: r elbow p}
+      - { key: cta_tau, id: [28], label: r elbow y}
+      - { key: cta_tau, id: [29], label: r wrist p }
+      - { key: cta_tau, id: [30], label: r wrist y }
+      - { key: cta_tau, id: [31], label: r hand }
+  rarm current:
+    legends:
+      - { key: RobotHardware0_tau, id: [24], label: r shoulder p }
+      - { key: RobotHardware0_tau, id: [25], label: r shoulder r }
+      - { key: RobotHardware0_tau, id: [26], label: r shoulder y }
+      - { key: RobotHardware0_tau, id: [44], label: r elbow p}
+      - { key: RobotHardware0_tau, id: [28], label: r elbow y}
+      - { key: RobotHardware0_tau, id: [29], label: r wrist p }
+      - { key: RobotHardware0_tau, id: [30], label: r wrist y }
+      - { key: RobotHardware0_tau, id: [31], label: r hand }
+

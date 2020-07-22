@@ -1,0 +1,57 @@
+main:
+  robothardware dq 0-14:
+    legends:
+      - { key: RobotHardware0_dq_lin, id: [0], label: 0}
+      - { key: RobotHardware0_dq_lin, id: [1], label: 1}
+      - { key: RobotHardware0_dq_lin, id: [2], label: 2}
+      - { key: RobotHardware0_dq_lin, id: [3], label: 3}
+      - { key: RobotHardware0_dq_lin, id: [4], label: 4}
+      - { key: RobotHardware0_dq_lin, id: [5], label: 5}
+      - { key: RobotHardware0_dq_lin, id: [6], label: 6}
+      - { key: RobotHardware0_dq_lin, id: [7], label: 7}
+      - { key: RobotHardware0_dq_lin, id: [8], label: 8}
+      - { key: RobotHardware0_dq_lin, id: [9], label: 9}
+      - { key: RobotHardware0_dq_lin, id: [10], label: 10}
+      - { key: RobotHardware0_dq_lin, id: [11], label: 11}
+      - { key: RobotHardware0_dq_lin, id: [12], label: 12}
+      - { key: RobotHardware0_dq_lin, id: [13], label: 13}
+      - { key: RobotHardware0_dq_lin, id: [14], label: 14}
+
+  robothardware dq 0-29:
+    legends:
+      - { key: RobotHardware0_dq_lin, id: [15], label: 15}
+      - { key: RobotHardware0_dq_lin, id: [16], label: 16}
+      - { key: RobotHardware0_dq_lin, id: [17], label: 17}
+      - { key: RobotHardware0_dq_lin, id: [18], label: 18}
+      - { key: RobotHardware0_dq_lin, id: [19], label: 19}
+      - { key: RobotHardware0_dq_lin, id: [20], label: 20}
+      - { key: RobotHardware0_dq_lin, id: [21], label: 21}
+      - { key: RobotHardware0_dq_lin, id: [22], label: 22}
+      - { key: RobotHardware0_dq_lin, id: [23], label: 23}
+      - { key: RobotHardware0_dq_lin, id: [24], label: 24}
+      - { key: RobotHardware0_dq_lin, id: [25], label: 25}
+      - { key: RobotHardware0_dq_lin, id: [26], label: 26}
+      - { key: RobotHardware0_dq_lin, id: [27], label: 27}
+      - { key: RobotHardware0_dq_lin, id: [28], label: 28}
+      - { key: RobotHardware0_dq_lin, id: [29], label: 29}
+
+  robothardware dq 30-45:
+    legends:
+      - { key: RobotHardware0_dq_lin, id: [30], label: 30}
+      - { key: RobotHardware0_dq_lin, id: [31], label: 31}
+      - { key: RobotHardware0_dq_lin, id: [32], label: 32}
+      - { key: RobotHardware0_dq_lin, id: [33], label: 33}
+      - { key: RobotHardware0_dq_lin, id: [34], label: 34}
+      - { key: RobotHardware0_dq_lin, id: [35], label: 35}
+      - { key: RobotHardware0_dq_lin, id: [36], label: 36}
+      - { key: RobotHardware0_dq_lin, id: [37], label: 37}
+      - { key: RobotHardware0_dq_lin, id: [38], label: 38}
+      - { key: RobotHardware0_dq_lin, id: [39], label: 39}
+      - { key: RobotHardware0_dq_lin, id: [40], label: 40}
+      - { key: RobotHardware0_dq_lin, id: [41], label: 41}
+      - { key: RobotHardware0_dq_lin, id: [42], label: 42}
+      - { key: RobotHardware0_dq_lin, id: [43], label: 43}
+      - { key: RobotHardware0_dq_lin, id: [44], label: 44}
+      - { key: RobotHardware0_dq_lin, id: [45], label: 45}
+
+

@@ -1,0 +1,46 @@
+main:
+#  rleg_joint_angle:
+#    legends:
+#      - { key: RobotHardware0_q, id: [0-5] }
+
+#  lleg_joint_angle:
+#    legends:
+#      - { key: RobotHardware0_q, id: [6-11] }
+
+  knee current:
+    legends:
+      - { key: RobotHardware0_tau, id: [39], label: L knee }
+      - { key: RobotHardware0_tau, id: [34], label: R knee }
+
+  leg cylinder:
+    legends:
+      - { key: RobotHardware0_q_lin, id: [39], label: knee }
+      - { key: RobotHardware0_q_lin, id: [34], label: knee }
+      - { key: atc_q, id: [39], label: ref knee }
+      - { key: atc_q, id: [34], label: ref knee }
+  leg cylinder diff:
+    legends:
+      - { key: cyl_diff, id: [39], label: knee }
+      - { key: cyl_diff, id: [34], label: knee }
+  leg rotational:
+    legends:
+      - { key: el_q, id: [3], label: Leg knee EL}
+      - { key: el_q, id: [11], label: Right knee EL}
+      - { key: cta_q, id: [3], label: Leg knee }
+      - { key: cta_q, id: [11], label: Right knee }
+
+  # rarm cylinder:
+  #   legends:
+  #     - { key: RobotHardware0_q, id: [44] , label: elbow }
+  #     - { key: RobotHardware0_q, id: [46] , label: wrist-inner }
+  #     - { key: RobotHardware0_q, id: [47] , label: wrist-outer }
+
+  # larm cylinder:
+  #   legends:
+  #     - { key: RobotHardware0_q_lin, id: [45] , label: elbow }
+  #     - { key: RobotHardware0_q_lin, id: [48] , label: wrist-inner }
+  #     - { key: RobotHardware0_q_lin, id: [49] , label: wrist-outer }
+  #     - { key: atc_q, id: [45] , label: ref elbow }
+  #     - { key: atc_q, id: [48] , label: ref wrist-inner }
+  #     - { key: atc_q, id: [49] , label: ref wrist-outer }
+

@@ -1,0 +1,63 @@
+main:
+#  rleg_joint_angle:
+#    legends:
+#      - { key: RobotHardware0_q, id: [0-5] }
+
+#  lleg_joint_angle:
+#    legends:
+#      - { key: RobotHardware0_q, id: [6-11] }
+
+  # rleg current:
+  #   legends:
+  #     - { key: RobotHardware0_tau, id: [32], label: crotch-innner }
+  #     - { key: RobotHardware0_tau, id: [33], label: crotch-outer  }
+  #     - { key: RobotHardware0_tau, id: [34], label: knee }
+  #     - { key: RobotHardware0_tau, id: [35], label: ankle-innner }
+  #     - { key: RobotHardware0_tau, id: [36], label: ankle-outer  }
+  # lleg current:
+  #   legends:
+  #     - { key: RobotHardware0_tau, id: [37], label: crotch-innner }
+  #     - { key: RobotHardware0_tau, id: [38], label: crotch-outer  }
+  #     - { key: RobotHardware0_tau, id: [39], label: knee }
+  #     - { key: RobotHardware0_tau, id: [40], label: ankle-innner }
+  #     - { key: RobotHardware0_tau, id: [41], label: ankle-outer  }
+
+  # rarm current:
+  #   legends:
+  #     - { key: RobotHardware0_tau, id: [44] , label: elbow }
+  #     - { key: RobotHardware0_tau, id: [46] , label: wrist-inner }
+  #     - { key: RobotHardware0_tau, id: [47] , label: wrist-outer }
+
+  # larm current:
+  #   legends:
+  #     - { key: RobotHardware0_tau, id: [45], label: elbow }
+  #     - { key: RobotHardware0_tau, id: [48], label: wrist-inner }
+  #     - { key: RobotHardware0_tau, id: [49], label: wrist-outer }
+
+  # rarm cylinder:
+  #   legends:
+  #     - { key: RobotHardware0_q, id: [44] , label: elbow }
+  #     - { key: RobotHardware0_q, id: [46] , label: wrist-inner }
+  #     - { key: RobotHardware0_q, id: [47] , label: wrist-outer }
+
+  larm cylinder:
+    legends:
+      - { key: RobotHardware0_q_lin, id: [44] , label: r elbow }
+      - { key: RobotHardware0_q_lin, id: [45] , label: l elbow }
+      - { key: atc_q, id: [44] , label: ref r elbow }
+      - { key: atc_q, id: [45] , label: ref l elbow }
+#   torso:
+#     legends:
+#       - { key: sh_qOut, id: [6] , label: sh waist-y }
+#       - { key: sh_qOut, id: [7] , label: sh waist-p }
+# #      - { key: st_q, id: [6] , label: st waist-y }
+# #      - { key: st_q, id: [7] , label: st waist-p }
+#       - { key: el_q, id: [6] , label: el waist-y }
+#       - { key: el_q, id: [7] , label: el waist-p }
+#       - { key: cta_q, id: [6] , label: cta waist-y }
+#       - { key: cta_q, id: [7] , label: cta waist-p }
+# #      - { key: seq_q, id: [6] , label: waist-p }
+# #      - { key: seq_q, id: [7] , label: waist-y }
+#       - { key: atc_q, id: [42] , label: cta lin waist-y }
+#       - { key: atc_q, id: [43] , label: cta lin waist-p }
+

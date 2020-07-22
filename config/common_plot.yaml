@@ -19,18 +19,18 @@ abc_originRefCog:
   data:
     - { log: abc_originRefCog, column: [0-2] }
 ## cog velocity
-st_originActCogVel:
-  data:
-    - { log: st_originActCogVel, column: [0-2] }
-st_originRefCogVel:
-  data:
-    - { log: st_originRefCogVel, column: [0-2] }
-abc_originActCogVel:
-  data:
-    - { log: st_originActCogVel, column: [0-2] }
-abc_originRefCogVel:
-  data:
-    - { log: st_originRefCogVel, column: [0-2] }
+# st_originActCogVel:
+#   data:
+#     - { log: st_originActCogVel, column: [0-2] }
+# st_originRefCogVel:
+#   data:
+#     - { log: st_originRefCogVel, column: [0-2] }
+# abc_originActCogVel:
+#   data:
+#     - { log: st_originActCogVel, column: [0-2] }
+# abc_originRefCogVel:
+#   data:
+#     - { log: st_originRefCogVel, column: [0-2] }
 ## zmp
 abc_zmpOut:
   data:

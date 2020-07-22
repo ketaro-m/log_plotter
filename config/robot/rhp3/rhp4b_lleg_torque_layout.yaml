@@ -1,0 +1,50 @@
+main:
+  # lleg current:
+  #   legends:
+  #     - { key: RobotHardware0_tau, id: [0], label: crotch-yaw }
+  #     - { key: RobotHardware0_tau, id: [37], label: crotch-inner }
+  #     - { key: RobotHardware0_tau, id: [38], label: crotch-outer }
+  #     - { key: RobotHardware0_tau, id: [39], label: knee }
+  #     - { key: RobotHardware0_tau, id: [40], label: ankle-inner }
+  #     - { key: RobotHardware0_tau, id: [41], label: ankle-outer }
+  # lleg torque:
+  #   legends:
+  #     - { key: cta_tau, id: [0], label: crotch yaw }
+  #     - { key: cta_tau, id: [1], label: crotch pitch }
+  #     - { key: cta_tau, id: [2], label: crotch roll }
+  #     - { key: cta_tau, id: [3], label: knee }
+  #     - { key: cta_tau, id: [4], label: ankle roll}
+  #     - { key: cta_tau, id: [5], label: ankle pitch }
+  # rleg current:
+  #   legends:
+  #     - { key: RobotHardware0_tau, id: [8], label: crotch-yaw }
+  #     - { key: RobotHardware0_tau, id: [32], label: crotch-inner }
+  #     - { key: RobotHardware0_tau, id: [33], label: crotch-outer }
+  #     - { key: RobotHardware0_tau, id: [34], label: knee }
+  #     - { key: RobotHardware0_tau, id: [35], label: ankle-inner }
+  #     - { key: RobotHardware0_tau, id: [36], label: ankle-outer }
+  # rleg torque:
+  #   legends:
+  #     - { key: cta_tau, id: [8], label: crotch yaw }
+  #     - { key: cta_tau, id: [9], label: crotch pitch }
+  #     - { key: cta_tau, id: [10], label: crotch roll }
+  #     - { key: cta_tau, id: [11], label: knee }
+  #     - { key: cta_tau, id: [12], label: ankle roll}
+  #     - { key: cta_tau, id: [13], label: ankle pitch }
+  lleg torque:
+    legends:
+      - { key: cta_tau, id: [0], label: l crotch y }
+      - { key: cta_tau, id: [1], label: l crotch p }
+      - { key: cta_tau, id: [2], label: l crotch r }
+      - { key: cta_tau, id: [3], label: l knee p}
+      - { key: cta_tau, id: [4], label: l ankle r}
+      - { key: cta_tau, id: [5], label: l ankle p }
+  lleg current:
+    legends:
+      - { key: RobotHardware0_tau, id: [37], label: l crotch inner }
+      - { key: RobotHardware0_tau, id: [38], label: l crotch outer }
+      - { key: RobotHardware0_tau, id: [0], label: l crotch yaw }
+      - { key: RobotHardware0_tau, id: [39], label: l knee}
+      - { key: RobotHardware0_tau, id: [40], label: l ankle inner}
+      - { key: RobotHardware0_tau, id: [41], label: l ankle outer }
+

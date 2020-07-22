@@ -1,0 +1,56 @@
+main:
+#  rleg_joint_angle:
+#    legends:
+#      - { key: RobotHardware0_q, id: [0-5] }
+
+#  lleg_joint_angle:
+#    legends:
+#      - { key: RobotHardware0_q, id: [6-11] }
+
+  # rleg current:
+  #   legends:
+  #     - { key: RobotHardware0_tau, id: [32], label: crotch-innner }
+  #     - { key: RobotHardware0_tau, id: [33], label: crotch-outer  }
+  #     - { key: RobotHardware0_tau, id: [34], label: knee }
+  #     - { key: RobotHardware0_tau, id: [35], label: ankle-innner }
+  #     - { key: RobotHardware0_tau, id: [36], label: ankle-outer  }
+  # lleg current:
+  #   legends:
+  #     - { key: RobotHardware0_tau, id: [37], label: crotch-innner }
+  #     - { key: RobotHardware0_tau, id: [38], label: crotch-outer  }
+  #     - { key: RobotHardware0_tau, id: [39], label: knee }
+  #     - { key: RobotHardware0_tau, id: [40], label: ankle-innner }
+  #     - { key: RobotHardware0_tau, id: [41], label: ankle-outer  }
+
+  # rarm current:
+  #   legends:
+  #     - { key: RobotHardware0_tau, id: [44] , label: elbow }
+  #     - { key: RobotHardware0_tau, id: [46] , label: wrist-inner }
+  #     - { key: RobotHardware0_tau, id: [47] , label: wrist-outer }
+
+  # larm current:
+  #   legends:
+  #     - { key: RobotHardware0_tau, id: [45], label: elbow }
+  #     - { key: RobotHardware0_tau, id: [48], label: wrist-inner }
+  #     - { key: RobotHardware0_tau, id: [49], label: wrist-outer }
+
+  # rarm cylinder:
+  #   legends:
+  #     - { key: RobotHardware0_q, id: [44] , label: elbow }
+  #     - { key: RobotHardware0_q, id: [46] , label: wrist-inner }
+  #     - { key: RobotHardware0_q, id: [47] , label: wrist-outer }
+
+  # larm cylinder:
+  #   legends:
+  #     - { key: RobotHardware0_q_lin, id: [45] , label: elbow }
+  #     - { key: RobotHardware0_q_lin, id: [48] , label: wrist-inner }
+  #     - { key: RobotHardware0_q_lin, id: [49] , label: wrist-outer }
+  #     - { key: atc_q, id: [45] , label: ref elbow }
+  #     - { key: atc_q, id: [48] , label: ref wrist-inner }
+  #     - { key: atc_q, id: [49] , label: ref wrist-outer }
+  torso:
+    legends:
+      - { key: RobotHardware0_q, id: [] , label: waist-p }
+      - { key: RobotHardware0_q, id: [] , label: waist-y }
+
+

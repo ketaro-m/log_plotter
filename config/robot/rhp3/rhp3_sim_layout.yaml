@@ -1,0 +1,41 @@
+main:
+  # rarm torque:
+  #   legends:
+  #     - { key: RobotHardware0_tau, id: [16], label: shoulder-p }
+  #     - { key: RobotHardware0_tau, id: [17], label: shoulder-r }
+  #     - { key: RobotHardware0_tau, id: [18], label: shoulder-y }
+  #     - { key: RobotHardware0_tau, id: [19], label: elbow-p }
+  #     - { key: RobotHardware0_tau, id: [20], label: wrist-r }
+  #     - { key: RobotHardware0_tau, id: [21], label: wrist-p }
+  #     - { key: RobotHardware0_tau, id: [22], label: wrist-y }
+
+  # rleg torque:
+  #   legends:
+  #     - { key: RobotHardware0_tau, id: [0], label: crotch-y }
+  #     - { key: RobotHardware0_tau, id: [1], label: crotch-p }
+  #     - { key: RobotHardware0_tau, id: [2], label: crotch-r  }
+  #     - { key: RobotHardware0_tau, id: [3], label: knee-p }
+  #     - { key: RobotHardware0_tau, id: [4], label: ankle-r }
+  #     - { key: RobotHardware0_tau, id: [5], label: ankle-p }
+
+  torque:
+    legends:
+#      - { key: RobotHardware0_tau, id: [1], label: crotch-p }
+#      - { key: RobotHardware0_tau, id: [2], label: crotch-r }
+#      - { key: RobotHardware0_tau, id: [3], label: knee-p }
+      - { key: RobotHardware0_tau, id: [16], label: shoulder-p }
+      - { key: RobotHardware0_tau, id: [17], label: shoulder-r }
+      - { key: RobotHardware0_tau, id: [18], label: shoulder-y }
+      - { key: RobotHardware0_tau, id: [19], label: elbow-p }
+      - { key: RobotHardware0_tau, id: [20], label: wrist-r }
+      - { key: RobotHardware0_tau, id: [21], label: wrist-p }
+      - { key: RobotHardware0_tau, id: [22], label: wrist-y }
+#      - { key: RobotHardware0_tau, id: [12], label: waist-y }
+#      - { key: RobotHardware0_tau, id: [13], label: waist-p }
+#      - { key: RobotHardware0_tau, id: [4], label: ankle-r }
+#      - { key: RobotHardware0_tau, id: [5], label: ankle-p }
+
+  # angle:
+  #   legends:
+  #     - { key: RobotHardware0_q, id: [16], label: shoulder-p }
+  #     - { key: RobotHardware0_q, id: [19], label: elbow-p }

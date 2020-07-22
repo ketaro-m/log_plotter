@@ -1,0 +1,33 @@
+main:
+  lleg current:
+    legends:
+      - { key: RobotHardware0_tau, id: [6], label: crotch-yaw }
+      - { key: RobotHardware0_tau, id: [37], label: crotch-inner }
+      - { key: RobotHardware0_tau, id: [38], label: crotch-outer }
+      - { key: RobotHardware0_tau, id: [39], label: knee }
+      - { key: RobotHardware0_tau, id: [40], label: ankle-inner }
+      - { key: RobotHardware0_tau, id: [41], label: ankle-outer }
+  lleg torque:
+    legends:
+      - { key: cta_tau, id: [6], label: crotch yaw }
+      - { key: cta_tau, id: [7], label: crotch pitch }
+      - { key: cta_tau, id: [8], label: crotch roll }
+      - { key: cta_tau, id: [9], label: knee }
+      - { key: cta_tau, id: [10], label: ankle roll}
+      - { key: cta_tau, id: [11], label: ankle pitch }
+  rleg current:
+    legends:
+      - { key: RobotHardware0_tau, id: [6], label: crotch-yaw }
+      - { key: RobotHardware0_tau, id: [32], label: crotch-inner }
+      - { key: RobotHardware0_tau, id: [33], label: crotch-outer }
+      - { key: RobotHardware0_tau, id: [34], label: knee }
+      - { key: RobotHardware0_tau, id: [35], label: ankle-inner }
+      - { key: RobotHardware0_tau, id: [36], label: ankle-outer }
+  rleg torque:
+    legends:
+      - { key: cta_tau, id: [0], label: crotch yaw }
+      - { key: cta_tau, id: [1], label: crotch pitch }
+      - { key: cta_tau, id: [2], label: crotch roll }
+      - { key: cta_tau, id: [3], label: knee }
+      - { key: cta_tau, id: [4], label: ankle roll}
+      - { key: cta_tau, id: [5], label: ankle pitch }

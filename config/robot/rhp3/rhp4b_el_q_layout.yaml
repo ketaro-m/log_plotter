@@ -1,0 +1,55 @@
+main:
+  el_q 0-14:
+    legends:
+      - { key: el_q, id: [0], label: 0}
+      - { key: el_q, id: [1], label: 1}
+      - { key: el_q, id: [2], label: 2}
+      - { key: el_q, id: [3], label: 3}
+      - { key: el_q, id: [4], label: 4}
+      - { key: el_q, id: [5], label: 5}
+      - { key: el_q, id: [6], label: 6}
+      - { key: el_q, id: [7], label: 7}
+      - { key: el_q, id: [8], label: 8}
+      - { key: el_q, id: [9], label: 9}
+      - { key: el_q, id: [10], label: 10}
+      - { key: el_q, id: [11], label: 11}
+      - { key: el_q, id: [12], label: 12}
+      - { key: el_q, id: [13], label: 13}
+      - { key: el_q, id: [14], label: 14}
+
+  el_q 0-29:
+    legends:
+      - { key: el_q, id: [15], label: 15}
+      - { key: el_q, id: [16], label: 16}
+      - { key: el_q, id: [17], label: 17}
+      - { key: el_q, id: [18], label: 18}
+      - { key: el_q, id: [19], label: 19}
+      - { key: el_q, id: [20], label: 20}
+      - { key: el_q, id: [21], label: 21}
+      - { key: el_q, id: [22], label: 22}
+      - { key: el_q, id: [23], label: 23}
+      - { key: el_q, id: [24], label: 24}
+      - { key: el_q, id: [25], label: 25}
+      - { key: el_q, id: [26], label: 26}
+      - { key: el_q, id: [27], label: 27}
+      - { key: el_q, id: [28], label: 28}
+      - { key: el_q, id: [29], label: 29}
+
+  el_q 30-45:
+    legends:
+      - { key: el_q, id: [30], label: 30}
+      - { key: el_q, id: [31], label: 31}
+      - { key: el_q, id: [32], label: 32}
+      - { key: el_q, id: [33], label: 33}
+      - { key: el_q, id: [34], label: 34}
+      - { key: el_q, id: [35], label: 35}
+      - { key: el_q, id: [36], label: 36}
+      - { key: el_q, id: [37], label: 37}
+      - { key: el_q, id: [38], label: 38}
+      - { key: el_q, id: [39], label: 39}
+      - { key: el_q, id: [40], label: 40}
+      - { key: el_q, id: [41], label: 41}
+      - { key: el_q, id: [42], label: 42}
+      - { key: el_q, id: [43], label: 43}
+      - { key: el_q, id: [44], label: 44}
+      - { key: el_q, id: [45], label: 45}
