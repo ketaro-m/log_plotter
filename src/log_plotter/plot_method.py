@@ -7,7 +7,7 @@ import sys
 try:
     import pyqtgraph
 except:
-    print "please install pyqtgraph. see http://www.pyqtgraph.org/"
+    print("please install pyqtgraph. see http://www.pyqtgraph.org/")
     sys.exit(1)
 
 class PlotMethod(object):
@@ -16,16 +16,18 @@ class PlotMethod(object):
     # default color set on gnuplot 5.0
     color_list = ["9400D3", "009E73", "56B4E9", "E69F00", "F0E442", "0072B2", "E51E10", "0000FF"]
     linetypes = {
-        "color": color_list * 2,
-        "style": [pyqtgraph.QtCore.Qt.SolidLine] * len(color_list) + [pyqtgraph.QtCore.Qt.DotLine] * len(color_list)
-        # "style": [pyqtgraph.QtCore.Qt.SolidLine] + [pyqtgraph.QtCore.Qt.DotLine] + [pyqtgraph.QtCore.Qt.DashLine] + [pyqtgraph.QtCore.Qt.DashDotLine]
+        "color": color_list * 5,
+        "style": [pyqtgraph.QtCore.Qt.SolidLine] * len(color_list)
+        + [pyqtgraph.QtCore.Qt.DotLine] * len(color_list)
+        + [pyqtgraph.QtCore.Qt.DashLine] * len(color_list)
+        + [pyqtgraph.QtCore.Qt.DashDotLine] * len(color_list)
+        + [pyqtgraph.QtCore.Qt.DashDotDotLine] * len(color_list)
     }
-
 
     @staticmethod
     def __plot_urata_servo(plot_item, times, data_dict, logs, log_cols, cur_col, key, i, offset1, offset2=1):
         plot_item.plot(times, data_dict[logs[0]][:, (PlotMethod.urata_len+1) * log_cols[0] + (offset1+offset2)],
-                       pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=1.5, style=PlotMethod.linetypes["style"][i]), name=key)
+                       pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=2, style=PlotMethod.linetypes["style"][i]), name=key)
 
     @staticmethod
     def plot_servostate(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
@@ -39,7 +41,7 @@ class PlotMethod(object):
             return state
         vfr = numpy.vectorize(RePack)
         plot_item.plot(times, vfr(data_dict[logs[0]][:, (PlotMethod.urata_len+1) * log_cols[0] + (0+0)]),
-                       pen=pyqtgraph.mkPen('r', width=1.5, style=PlotMethod.linetypes["style"][i]), name=key)
+                       pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=2, style=PlotMethod.linetypes["style"][i]), name=key)
 
     @staticmethod
     def plot_commnormal(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
@@ -74,44 +76,70 @@ class PlotMethod(object):
         PlotMethod.__plot_urata_servo(plot_item, times, data_dict, logs, log_cols, cur_col, key, i, 11)
 
     @staticmethod
+    def plot_enc(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
+        plot_item.plot(times, [math.degrees(x) for x in data_dict[logs[0]][:, (PlotMethod.urata_len+1) * log_cols[0] + (4+1)]],
+                       pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=2, style=PlotMethod.linetypes["style"][i]), name=key)
+
+    @staticmethod
     def plot_abs_enc(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
         plot_item.plot(times, [math.degrees(x) for x in data_dict[logs[0]][:, (PlotMethod.urata_len+1) * log_cols[0] + (6+1)]],
-                       pen=pyqtgraph.mkPen('g', width=1.5, style=PlotMethod.linetypes["style"][i]), name=key)
+                       pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=2, style=PlotMethod.linetypes["style"][i]), name=key)
 
     @staticmethod
     def plot_rh_q_st_q(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
         plot_item.plot(times, [math.degrees(x) for x in (data_dict[logs[1]][:, log_cols[1]] - data_dict[logs[0]][:, log_cols[0]])],
-                       pen=pyqtgraph.mkPen('r', width=1.5, style=PlotMethod.linetypes["style"][i]), name=key)
+                       pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=2, style=PlotMethod.linetypes["style"][i]), name=key)
 
     @staticmethod
     def plot_rad2deg(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
         data_rad=data_dict[logs[0]][:, log_cols[0]]
         data_deg=[math.degrees(x) for x in data_rad]
-        plot_item.plot(times, data_deg,pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=1.5, style=PlotMethod.linetypes["style"][i]), name=key)
+        plot_item.plot(times, data_deg,pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=2, style=PlotMethod.linetypes["style"][i]), name=key)
 
     @staticmethod
     def plot_watt(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
         joint_vel=data_dict[logs[0]][:, log_cols[0]]
         joint_tau=data_dict[logs[1]][:, log_cols[1]]
         watt=joint_vel*joint_tau
-        plot_item.plot(times, watt,pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=1.5, style=PlotMethod.linetypes["style"][i]), name=key, fillLevel=0, fillBrush=PlotMethod.linetypes["color"][i])
+        plot_item.plot(times, watt,pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=2, style=PlotMethod.linetypes["style"][i]), name=key, fillLevel=0, fillBrush=PlotMethod.linetypes["color"][i])
+
+    @staticmethod
+    def plot_rad2deg_vel(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
+        data = [math.degrees(x) for x in numpy.diff(data_dict[logs[0]][:, log_cols[0]])/numpy.diff(times)]
+        plot_item.plot(times, numpy.append(data,[0]), pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=2, style=PlotMethod.linetypes["style"][i]), name=key)
+
+    @staticmethod
+    def plot_rad2deg_vel_advanced(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
+        cutoff = 20
+        dt2pif = 0.002*2*math.pi*cutoff
+        T = 0.01
+        # T = 0.018
+        T = 0.025
+        tau = 1.0/(2*math.pi*cutoff)
+        a = (T+tau)/tau
+        command_vels = numpy.diff(data_dict[logs[0]][:, log_cols[0]])/numpy.diff(times)
+        command_vel_prev = [command_vels[0]]
+        ref_vel_prev = [command_vels[0]]
+        ref_vel = [0]
+        data = [math.degrees(ref_vel[0]) if ref_vel.__setitem__(0,command_vel*(a+dt2pif)/(1+dt2pif) - command_vel_prev[0]*a/(1+dt2pif) + ref_vel_prev[0]/(1+dt2pif)) or command_vel_prev.__setitem__(0,command_vel) or ref_vel_prev.__setitem__(0,ref_vel[0]) or True else -1 for command_vel in command_vels]
+        plot_item.plot(times, numpy.append(data,[0]), pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=2, style=PlotMethod.linetypes["style"][i]), name=key)
 
     @staticmethod
     def plot_diff(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
         data_minuend = data_dict[logs[0]][:, log_cols[0]]
         data_subtrahend = data_dict[logs[1]][:, log_cols[1]]
         data = data_minuend - data_subtrahend
-        plot_item.plot(times, data, pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=1.5, style=PlotMethod.linetypes["style"][i]), name=key)
+        plot_item.plot(times, data, pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=2, style=PlotMethod.linetypes["style"][i]), name=key)
 
     @staticmethod
     def plot_rad2deg_diff(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
         plot_item.plot(times, [math.degrees(x) for x in (data_dict[logs[1]][:, log_cols[1]] - data_dict[logs[0]][:, log_cols[0]])],
-                       pen=pyqtgraph.mkPen('r', width=1.5, style=PlotMethod.linetypes["style"][i]), name=key)
+                       pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=2, style=PlotMethod.linetypes["style"][i]), name=key)
 
     @staticmethod
     def plot_comp(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
         plot_item.plot(times, data_dict[logs[0]][:, log_cols[0]],
-                       pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=1.5, style=PlotMethod.linetypes["style"][i]), name=key)
+                       pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=2, style=PlotMethod.linetypes["style"][i]), name=key)
         if log_cols[0] % 6 < 3: # position
             plot_item.setYRange(-0.025, +0.025) # compensation limit
         else: # rotation
@@ -119,102 +147,30 @@ class PlotMethod(object):
 
     @staticmethod
     def plot_COP(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
-        offset = log_cols[0]*6
+        # offset = log_cols[0]*6
         arg = logs[min(len(logs)-1,cur_col)]
-        f_z = data_dict[arg][:, offset+2]
-        tau_x = data_dict[arg][:, offset+3]
-        tau_y = data_dict[arg][:, offset+4]
-        plot_item.plot(times, -tau_y/f_z, pen=pyqtgraph.mkPen(PlotMethod.color_list[2*i], width=1.5, style=PlotMethod.linetypes["style"][i]), name=key)
-        plot_item.plot(times,  tau_x/f_z, pen=pyqtgraph.mkPen(PlotMethod.color_list[2*i+1], width=1.5, style=PlotMethod.linetypes["style"][i]), name=key)
+        # f_z = data_dict[arg][:, offset+2]
+        # tau_x = data_dict[arg][:, offset+3]
+        # tau_y = data_dict[arg][:, offset+4]
+        # plot_item.plot(times, -tau_y/f_z, pen=pyqtgraph.mkPen(PlotMethod.color_list[2*i], width=2, style=PlotMethod.linetypes["style"][i]), name=key)
+        # plot_item.plot(times,  tau_x/f_z, pen=pyqtgraph.mkPen(PlotMethod.color_list[2*i+1], width=2, style=PlotMethod.linetypes["style"][i]), name=key)
+        f_z = data_dict[logs[0]][:, log_cols[0]+2]
+        if logs[0].find('rmfo'): f_z = -f_z
+        tau_x = data_dict[logs[0]][:, log_cols[0]+3]
+        if logs[0].find('rmfo'): tau_x = -tau_x
+        tau_y = data_dict[logs[0]][:, log_cols[0]+4]
+        plot_item.plot(times, -tau_y/f_z, pen=pyqtgraph.mkPen(PlotMethod.color_list[2*i], width=2, style=PlotMethod.linetypes["style"][i]), name=key+"_x")
+        plot_item.plot(times,  tau_x/f_z, pen=pyqtgraph.mkPen(PlotMethod.color_list[2*i+1], width=2, style=PlotMethod.linetypes["style"][i]), name=key+"_y")
+
 
     @staticmethod
     def plot_inverse(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
-        plot_item.plot(times, -data_dict[logs[0]][:, log_cols[0]], pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=1.5, style=PlotMethod.linetypes["style"][i]), name=key)
+        plot_item.plot(times, -data_dict[logs[0]][:, log_cols[0]], pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=2, style=PlotMethod.linetypes["style"][i]), name=key)
 
     @staticmethod
     def plot_time(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
-        plot_item.plot(times, numpy.append([0], numpy.diff(times)), pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=1.5, style=PlotMethod.linetypes["style"][i]), name=key)
+        plot_item.plot(times, numpy.append([0], numpy.diff(times)), pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=2, style=PlotMethod.linetypes["style"][i]), name=key)
 
     @staticmethod
     def normal(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
-        plot_item.plot(times, data_dict[logs[0]][:, log_cols[0]], pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=1.5, style=PlotMethod.linetypes["style"][i]), name=key)
-
-    @staticmethod
-    def plot_add(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
-        data_summand = data_dict[logs[0]][:, log_cols[0]]
-        data_addend = data_dict[logs[1]][:, log_cols[1]]
-        data = data_summand + data_addend
-        plot_item.plot(times, data, pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=1.5, style=PlotMethod.linetypes["style"][i]), name=key)
-
-    @staticmethod
-    def plot_add_const(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
-        data_summand = data_dict[logs[0]][:, log_cols[0]]
-        data_addend = -0.045873
-        data = data_summand + data_addend
-        plot_item.plot(times, data, pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=1.5, style=PlotMethod.linetypes["style"][i]), name=key)
-
-    @staticmethod
-    def plot_cp(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
-        cogx = data_dict[logs[0]][:, log_cols[0]] # cog x
-        height = data_dict[logs[1]][:, log_cols[1]] # cog height
-        vel = data_dict[logs[2]][:, log_cols[2]]    # cog velocity
-        g = 9.80665
-        omega = numpy.sqrt(g / height)
-        data = vel / omega + cogx
-        plot_item.plot(times, data, pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=1.5, style=PlotMethod.linetypes["style"][i]), name=key)
-
-    @staticmethod
-    def plot_cp_add_const(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
-        cogx = data_dict[logs[0]][:, log_cols[0]] # cog x
-        height = data_dict[logs[1]][:, log_cols[1]] # cog height
-        vel = data_dict[logs[2]][:, log_cols[2]]    # cog velocity
-        g = 9.80665
-        omega = numpy.sqrt(g / height)
-        data_addend = -0.0184
-        data = vel / omega + cogx + data_addend
-        plot_item.plot(times, data, pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=1.5, style=PlotMethod.linetypes["style"][i]), name=key)
-
-    @staticmethod
-    def plot_cp_diff(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
-        actcogx = data_dict[logs[0]][:, log_cols[0]] # cog x
-        refcogx = data_dict[logs[3]][:, log_cols[3]] # cog x
-        actheight = data_dict[logs[1]][:, log_cols[1]] # cog height
-        refheight = data_dict[logs[4]][:, log_cols[4]] # cog height
-        actvel = data_dict[logs[2]][:, log_cols[2]]    # cog velocity
-        refvel = data_dict[logs[5]][:, log_cols[5]]    # cog velocity
-        g = 9.80665
-        actomega = numpy.sqrt(g / actheight)
-        refomega = numpy.sqrt(g / refheight)
-        data = (actvel / actomega + actcogx)  - (refvel / refomega + refcogx)
-        plot_item.plot(times, data, pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=1.5, style=PlotMethod.linetypes["style"][i]), name=key)
-
-    @staticmethod
-    def plot_cog_with_sbp(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
-        M = 130.442
-        g = 9.80665
-        cogx = data_dict[logs[0]][:, log_cols[0]]
-        cog_offset = data_dict[logs[0]][0, log_cols[0]]
-        rleg_posx = data_dict[logs[1]][:, log_cols[1]] / 1000.0
-        lleg_posx = data_dict[logs[2]][:, log_cols[2]] / 1000.0
-        rleg_forcez = data_dict[logs[3]][:, log_cols[3]]
-        lleg_forcez = data_dict[logs[4]][:, log_cols[4]]
-        data = cogx + cogx - (M * g * cogx - rleg_posx * rleg_forcez - lleg_posx * lleg_forcez) / (M * g - rleg_forcez - lleg_forcez) - cog_offset
-        plot_item.plot(times, data, pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=1.5, style=PlotMethod.linetypes["style"][i]), name=key)
-
-    @staticmethod
-    def plot_sbp_cog_offset(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
-        M = 130.442
-        g = 9.80665
-        cogx = data_dict[logs[0]][:, log_cols[0]]
-        rleg_posx = data_dict[logs[1]][:, log_cols[1]] / 1000.0
-        lleg_posx = data_dict[logs[2]][:, log_cols[2]] / 1000.0
-        rleg_forcez = data_dict[logs[3]][:, log_cols[3]]
-        lleg_forcez = data_dict[logs[4]][:, log_cols[4]]
-        data = cogx - (M * g * cogx - rleg_posx * rleg_forcez - lleg_posx * lleg_forcez) / (M * g - rleg_forcez - lleg_forcez)
-        plot_item.plot(times, data, pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=1.5, style=PlotMethod.linetypes["style"][i]), name=key)
-
-    @staticmethod
-    def plot_with_offset(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
-        offset = data_dict[logs[0]][0, log_cols[0]]
-        data = data_dict[logs[0]][:, log_cols[0]] - offset
-        plot_item.plot(times, data, pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=1.5, style=PlotMethod.linetypes["style"][i]), name=key)
+        plot_item.plot(times, data_dict[logs[0]][:, log_cols[0]], pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=2, style=PlotMethod.linetypes["style"][i]), name=key)

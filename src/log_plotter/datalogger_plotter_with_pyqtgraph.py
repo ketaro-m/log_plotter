@@ -14,7 +14,7 @@ from log_plotter.log_parser import LogParser
 try:
     import pyqtgraph
 except:
-    print "please install pyqtgraph. see http://www.pyqtgraph.org/"
+    print("please install pyqtgraph. see http://www.pyqtgraph.org/")
     sys.exit(1)
 
 
@@ -69,16 +69,20 @@ class LogPlotter(object):
                 # add graph
                 plot_item = self.view.addPlot(viewBox = pyqtgraph.ViewBox(border = pyqtgraph.mkPen(color='k', width=2)))
                 self.legend_list[graph_row].append([])
-                plot_item.setTitle(title+" "+ (str(j) if group_len != 1 else ""))
+                if group['title']:
+                    plot_item.setTitle(title+" "+ (str(j) if group_len != 1 else ""))
                 plot_item.showGrid(x=True, y=True, alpha=1)
-                if group.has_key('downsampling'):
+                if 'downsampling' in group.keys():
                     plot_item.setDownsampling(ds = group['downsampling'].get('ds', 100),
                                               auto=group['downsampling'].get('auto', False),
                                               mode=group['downsampling'].get('mode', 'peak'))
                 # add legend info to this graph
                 for k in range(len(group['legends'])):
-                    legend_info = GraphLegendInfo(self.layout_dict, self.plot_dict, i, j, k)
-                    self.legend_list[graph_row][graph_col].append(legend_info)
+                    try:
+                        legend_info = GraphLegendInfo(self.layout_dict, self.plot_dict, i, j, k)
+                        self.legend_list[graph_row][graph_col].append(legend_info)
+                    except IndexError:
+                        print('[setLayout] IndexError in row:{}, col:{}, (i,j,k)=({}, {}, {}).'.format(graph_row, graph_col, i, j, k))
                 graph_col += 1
             if group['newline']:
                 # add newline
@@ -94,9 +98,10 @@ class LogPlotter(object):
         '''
 
         color_list = pyqtgraph.functions.Colors.keys()
-        times = self.dataListDict[self._topic_list[0]][:, 0]
+        times = [data[:, 0] for topic, data in self.dataListDict.items() if data is not None][0] # get default time list from non-None data
         data_dict = {}
-        for log in self._topic_list: data_dict[log] = self.dataListDict[log][:, 1:]
+        for log in self._topic_list:
+            if self.dataListDict[log] is not None: data_dict[log] = self.dataListDict[log][:, 1:]
         # self.legend_list = [[[leg1, leg2,...],[],...]
         #                     [[],              [],...]
         #                     [[],              [],...]]
@@ -116,9 +121,17 @@ class LogPlotter(object):
                             x_offset = -legend.group_info['xRange'].get('min')
                         except TypeError: # when legend.group_info['xRange']['min'] is None
                             raise TypeError('[{graph_title}/{label}] please set xRange/min to use xRange/zero option'.format(graph_title=legend.graph_title, label=legend.info['label']))
-                    getattr(plot_method.PlotMethod, func)(cur_item,
-                                                          times + x_offset if x_offset else times,
-                                                          data_dict, logs, log_cols, cur_col, key, k)
+                    try:
+                        getattr(plot_method.PlotMethod, func)(cur_item,
+                                                              times + x_offset if x_offset else times,
+                                                              data_dict, logs, log_cols, cur_col, key, k)
+                                                              # data_dict, self.data_manager, logs, log_cols, cur_col, key, k)
+                    except TypeError:
+                        print('[plotData] TypeError in function: {}, logs: {}, log_cols: {}.'.format(func, logs, log_cols))
+                    except KeyError:
+                        print('[plotData] KeyError in function: {}, logs: {}, log_cols: {}.'.format(func, logs, log_cols))
+                    except IndexError:
+                        print('[plotData] IndexError in function: {}, logs: {}, log_cols: {}.'.format(func, logs, log_cols))
 
     @my_time
     def setLabel(self):
@@ -233,7 +246,7 @@ class LogPlotter(object):
         all_items = self.view.ci.items.keys()
         # link X axis and set AutoRange
         if not set_x_range:
-            target_item = all_items[0]
+            target_item = list(all_items)[0]
             for i, p in enumerate(all_items):
                 if i != 0:
                     p.setXLink(target_item)
@@ -313,7 +326,7 @@ class LogPlotter(object):
                 for i in del_list:
                     self.view.ci.removeItem(i)
             def hideExcCB(item):
-                del_list = self.view.ci.items.keys()
+                del_list = list(self.view.ci.items.keys())
                 del_list.remove(item)
                 for i in del_list:
                     self.view.ci.removeItem(i)
@@ -397,15 +410,21 @@ def main():
     if args.i:
         [app.processEvents() for i in range(2)]
         # start ipython
-        print '====='
-        print "please use \033[33mapp.processEvents()\033[m to update graph."
-        print "you can use \033[33ma\033[m as LogPlotter instance."
-        print '====='
+        print('=====')
+        print("please use \033[33mapp.processEvents()\033[m to update graph.")
+        print("you can use \033[33ma\033[m as LogPlotter instance.")
+        print('=====')
         from IPython import embed
         embed()
     else:
         signal.signal(signal.SIGINT, signal.SIG_DFL)
         pyqtgraph.Qt.QtGui.QApplication.instance().exec_()
+
+def plot_with_log_plotter(fname, plot_conf_name, layout_conf_name, title):
+    app = pyqtgraph.Qt.QtGui.QApplication([])
+    lp = LogPlotter(fname, plot_conf_name, layout_conf_name, title)
+    lp.main()
+    pyqtgraph.Qt.QtGui.QApplication.instance().exec_()
 
 if __name__ == '__main__':
     main()

@@ -1,0 +1,93 @@
+main:
+  torso q:
+    legends:
+      - { key: st_q, id: [12],label: st_chest-r  }
+      - { key: st_q, id: [13],label: st_chest-p  }
+      - { key: st_q, id: [14],label: st_chest-y  }
+      - { key: st_q, id: [15],label: st_neck-y }
+      - { key: st_q, id: [16],label: st_neck-p }
+      # - { key: abc_q, id: [12],label: abc_chest-r  }
+      # - { key: abc_q, id: [13],label: abc_chest-p  }
+      # - { key: abc_q, id: [14],label: abc_chest-y  }
+      # - { key: abc_q, id: [15],label: abc_neck-y }
+      # - { key: abc_q, id: [16],label: abc_neck-p}
+      - { key: abst_q, id: [12],label: abst_chest-r  }
+      - { key: abst_q, id: [13],label: abst_chest-p  }
+      - { key: abst_q, id: [14],label: abst_chest-y  }
+      - { key: abst_q, id: [15],label: abst_neck-y }
+      - { key: abst_q, id: [16],label: abst_neck-p }
+      # - { key: el_q, id: [12],label: el_chest-r  }
+      # - { key: el_q, id: [13],label: el_chest-p  }
+      # - { key: el_q, id: [14],label: el_chest-y  }
+      # - { key: el_q, id: [15],label: el_neck-y }
+      # - { key: el_q, id: [16],label: el_neck-p}
+      - { key: RobotHardware0_q, id: [12],label: rh_chest-r  }
+      - { key: RobotHardware0_q, id: [13],label: rh_chest-p  }
+      - { key: RobotHardware0_q, id: [14],label: rh_chest-y  }
+      - { key: RobotHardware0_q, id: [15],label: rh_neck-y }
+      - { key: RobotHardware0_q, id: [16],label: rh_neck-p}
+    bottom_label:
+    newline: false
+
+  torso vel:
+    legends:
+      - { key: el_dq, id: [12], label: el_chest-r}
+      - { key: el_dq, id: [13], label: el_chest-p}
+      - { key: el_dq, id: [14], label: el_chest-y}
+      - { key: el_dq, id: [15], label: el_knee}
+      - { key: el_dq, id: [16], label: el_neck-p}
+      - { key: RobotHardware0_dq, id: [12], label: rh_chest-r}
+      - { key: RobotHardware0_dq, id: [13], label: rh_chest-p}
+      - { key: RobotHardware0_dq, id: [14], label: rh_chest-y}
+      - { key: RobotHardware0_dq, id: [15], label: rh_knee}
+      - { key: RobotHardware0_dq, id: [16], label: rh_neck-p}
+    bottom_label:
+    newline: false
+
+  torso tau:
+    legends:
+      - { key: st_tau, id: [12], label: st_chest-r}
+      - { key: st_tau, id: [13], label: st_chest-p}
+      - { key: st_tau, id: [14], label: st_chest-y}
+      - { key: st_tau, id: [15], label: st_neck-y}
+      - { key: st_tau, id: [16], label: st_neck-p}
+      - { key: abc_tau, id: [12], label: abc_chest-r}
+      - { key: abc_tau, id: [13], label: abc_chest-p}
+      - { key: abc_tau, id: [14], label: abc_chest-y}
+      - { key: abc_tau, id: [15], label: abc_neck-y}
+      - { key: abc_tau, id: [16], label: abc_neck-p}
+      - { key: abst_tau, id: [12], label: abst_chest-r}
+      - { key: abst_tau, id: [13], label: abst_chest-p}
+      - { key: abst_tau, id: [14], label: abst_chest-y}
+      - { key: abst_tau, id: [15], label: abst_neck-y}
+      - { key: abst_tau, id: [16], label: abst_neck-p}
+      - { key: torque, id: [12], label: rh_chest-r}
+      - { key: torque, id: [13], label: rh_chest-p}
+      - { key: torque, id: [14], label: rh_chest-y}
+      - { key: torque, id: [15], label: rh_neck-y}
+      - { key: torque, id: [16], label: rh_neck-p}
+    newline: false
+
+  torso diff q:
+    legends:
+      - { key: rh_st_diff, id: [12],label: chest-r  }
+      - { key: rh_st_diff, id: [13],label: chest-p  }
+      - { key: rh_st_diff, id: [14],label: chest-y  }
+      - { key: rh_st_diff, id: [15],label: neck-y }
+      - { key: rh_st_diff, id: [16],label: neck-p}
+      - { key: rh_abc_diff, id: [12],label: chest-r  }
+      - { key: rh_abc_diff, id: [13],label: chest-p  }
+      - { key: rh_abc_diff, id: [14],label: chest-y  }
+      - { key: rh_abc_diff, id: [15],label: neck-y }
+      - { key: rh_abc_diff, id: [16],label: neck-p}
+      - { key: rh_abst_diff, id: [12],label: chest-r  }
+      - { key: rh_abst_diff, id: [13],label: chest-p  }
+      - { key: rh_abst_diff, id: [14],label: chest-y  }
+      - { key: rh_abst_diff, id: [15],label: neck-y }
+      - { key: rh_abst_diff, id: [16],label: neck-p}
+      # - { key: rh_el_diff, id: [12],label: chest-r  }
+      # - { key: rh_el_diff, id: [13],label: chest-p  }
+      # - { key: rh_el_diff, id: [14],label: chest-y  }
+      # - { key: rh_el_diff, id: [15],label: neck-y }
+      # - { key: rh_el_diff, id: [16],label: neck-p}
+    bottom_label:

@@ -3,7 +3,8 @@
 import numpy
 import metayaml
 import multiprocessing
-from log_plotter.plot_utils import readOneTopic, replaceRH
+from functools import reduce
+from log_plotter.plot_utils import readOneTopic, replaceRHString
 from log_plotter.graph_legend import expand_str_to_list
 
 
@@ -32,6 +33,7 @@ class LogParser(object):
                 if type(leg['id'][0]) == str:
                     leg['id'] = expand_str_to_list(leg['id'][0])
             self.layout_dict[dict_title].setdefault('newline', True)
+            self.layout_dict[dict_title].setdefault('title', True)
             self.layout_dict[dict_title].setdefault('left_label', False)
             self.layout_dict[dict_title].setdefault('bottom_label', "time [s]")
 
@@ -54,17 +56,16 @@ class LogParser(object):
         self._topic_list = topic_list
 
         # store data in parallel
-        fname_list = replaceRH([self.fname + '.' + ext for ext in topic_list])
+        fname_list = replaceRHString([self.fname + '.' + ext for ext in topic_list])
         pl = multiprocessing.Pool()
         data_list = pl.map(readOneTopic, fname_list)
         for topic, data in zip(topic_list, data_list):
             self.dataListDict[topic] = data
         # set the fastest time as 0
-        min_time = min([self.dataListDict[topic][0][0] for topic in topic_list])
-        for topic in topic_list:
-            raw_time = self.dataListDict[topic][:, 0]
-            self.dataListDict[topic][:, 0] = [x - self.dataListDict[topic][0][0] for x in raw_time]
-        # fix servoState
+        min_time = min([data[0][0] for data in self.dataListDict.values() if data is not None])
+        for log_name, data in self.dataListDict.items():
+            if data is not None: self.dataListDict[log_name][:, 0] = data[:, 0] - min_time
+        # convert servoState from int to float
         if 'RobotHardware0_servoState' in topic_list:
             ss_tmp = self.dataListDict['RobotHardware0_servoState'][:, 1:]
             self.dataListDict['RobotHardware0_servoState'][:, 1:] = numpy.fromstring(ss_tmp.astype('i').tostring(), dtype='f').reshape(ss_tmp.shape)
