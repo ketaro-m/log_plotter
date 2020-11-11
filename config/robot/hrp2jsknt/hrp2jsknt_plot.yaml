@@ -80,6 +80,10 @@ st_zmp:
   data:
     - { log: st_zmp, column: [0,1] }
 
+torque:
+  data:
+    - { log: RobotHardware0_tau, column: [0-33] }
+
 # ServoState:
 #   func: plot_servostate
 #   data:

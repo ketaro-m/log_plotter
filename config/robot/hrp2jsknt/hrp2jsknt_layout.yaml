@@ -1,8 +1,8 @@
 extend:
-  - hrp2jsknt_joint_angle_layout.yaml
-  - ../../st_layout.yaml
-  - ../../force_sensors_layout.yaml
-  - ../../imu_layout.yaml
+  # - hrp2jsknt_joint_angle_layout.yaml
+  # - ../../st_layout.yaml
+  # - ../../force_sensors_layout.yaml
+  # - ../../imu_layout.yaml
 
 main:
   tracking:
@@ -12,6 +12,14 @@ main:
   comp:
     legends:
       - { key: comp, id: [0-5] }
+
+  joint tau(rleg):
+    legends:
+      - { key: torque, id: [0-6] }
+
+  joint tau(lleg):
+    legends:
+      - { key: torque, id: [7-13] }
 
   # watt:
   #   legends:
