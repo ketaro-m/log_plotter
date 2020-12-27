@@ -10,6 +10,7 @@ main:
       - { key: tmp, id: [23], label: "feedforward_zmp"}
       - { key: tmp, id: [19], label: "cog wo dc"}
       - { key: abc_cogOut, id: [0]} # new_ref_cog
+      - { key: current_landing_pos, id: [0], label: "landing pos"}
     newline: false
 
   abs ref cog/zmp y:
@@ -23,6 +24,12 @@ main:
       - { key: tmp, id: [24], label: "feedforward_zmp"}
       - { key: tmp, id: [20], label: "cog wo dc"}
       - { key: abc_cogOut, id: [1]} # new_ref_cog
+      - { key: current_landing_pos, id: [1], label: "landing pos"}
+    newline: false
+
+  abs landing pos:
+    legends:
+      - { key: current_landing_pos, id: [2], label: "landing pos"}
 
   act/ref cog velocity:
     legends:
@@ -51,13 +58,13 @@ main:
       - { key: rmfo_off_rfsensor, id: [0-2] }
       - { key: rmfo_off_lfsensor, id: [0-2] }
 
-  ST cog/zmp x:
+  ST cog/zmp:
     legends:
-      - { key: abc_originActCog, id: [0]}
-      - { key: abc_originRefCog, id: [0]}
-      - { key: abc_originActZmp, id: [0]}
-      - { key: abc_originRefZmp, id: [0]}
-      - { key: abc_originNewZmp, id: [0]}
+      - { key: abc_originActCog, id: [0-2]}
+      - { key: abc_originRefCog, id: [0-2]}
+      - { key: abc_originActZmp, id: [0-2]}
+      - { key: abc_originRefZmp, id: [0-2]}
+      - { key: abc_originNewZmp, id: [0-2]}
 
   # rleg swing comp:
   #   legends:

@@ -259,6 +259,10 @@ tmp:
   data:
     - { log: abc_tmp, column: [0-30] }
 
+current_landing_pos:
+  data:
+    - { log: abc_currentLandingPos, column: [0-2] }
+
 swing_comp:
   func: plot_comp
   data:
