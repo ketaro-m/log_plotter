@@ -87,14 +87,14 @@ main:
   #     - { key: tmp, id: [14] }
   #   newline: false
 
-  # dc fx:
-  #   legends:
-  #     # - { key: tmp, id: [15], label: "raw dc fx"}
-  #     - { key: tmp, id: [17], label: "filterd dc fx"}
-  #   newline: false
+  dc fx:
+    legends:
+      # - { key: tmp, id: [15], label: "raw dc fx"}
+      - { key: tmp, id: [17], label: "filterd dc fx"}
+    newline: false
 
-  # dc fy:
-  #   legends:
-  #     # - { key: tmp, id: [16], label: "raw dc fy"}
-  #     - { key: tmp, id: [18], label: "filterd dc fy"}
-  #   newline: false
+  dc fy:
+    legends:
+      # - { key: tmp, id: [16], label: "raw dc fy"}
+      - { key: tmp, id: [18], label: "filterd dc fy"}
+    newline: false
