@@ -107,6 +107,28 @@ main:
       - { key: enc_q, id: [32], label: enc_wrist-p }
     bottom_label:
 
+  rarm ref wrench:
+    legends:
+      - { key: rfu_ref_rhsensorOut, id: [0], label: force-x}
+      - { key: rfu_ref_rhsensorOut, id: [1], label: force-y}
+      - { key: rfu_ref_rhsensorOut, id: [2], label: force-z}
+      - { key: rfu_ref_rhsensorOut, id: [3], label: moment-r}
+      - { key: rfu_ref_rhsensorOut, id: [4], label: moment-p}
+      - { key: rfu_ref_rhsensorOut, id: [5], label: moment-r}
+    bottom_label:
+    newline: false
+
+  larm ref wrench:
+    legends:
+      - { key: rfu_ref_lhsensorOut, id: [0], label: force-x}
+      - { key: rfu_ref_lhsensorOut, id: [1], label: force-y}
+      - { key: rfu_ref_lhsensorOut, id: [2], label: force-z}
+      - { key: rfu_ref_lhsensorOut, id: [3], label: moment-r}
+      - { key: rfu_ref_lhsensorOut, id: [4], label: moment-p}
+      - { key: rfu_ref_lhsensorOut, id: [5], label: moment-r}
+    bottom_label:
+    newline: false
+
   arm ServoState:
     legends:
       - { key: ServoState, id: [17], label: r-collar-y }

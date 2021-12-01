@@ -124,6 +124,28 @@ main:
       - { key: el_dq_adv, id: [10], label: adv_ankle-p}
     bottom_label:
 
+  rleg ref wrench:
+    legends:
+      - { key: rfu_ref_rfsensorOut, id: [0], label: force-x}
+      - { key: rfu_ref_rfsensorOut, id: [1], label: force-y}
+      - { key: rfu_ref_rfsensorOut, id: [2], label: force-z}
+      - { key: rfu_ref_rfsensorOut, id: [3], label: moment-r}
+      - { key: rfu_ref_rfsensorOut, id: [4], label: moment-p}
+      - { key: rfu_ref_rfsensorOut, id: [5], label: moment-r}
+    bottom_label:
+    newline: false
+
+  lleg ref wrench:
+    legends:
+      - { key: rfu_ref_lfsensorOut, id: [0], label: force-x}
+      - { key: rfu_ref_lfsensorOut, id: [1], label: force-y}
+      - { key: rfu_ref_lfsensorOut, id: [2], label: force-z}
+      - { key: rfu_ref_lfsensorOut, id: [3], label: moment-r}
+      - { key: rfu_ref_lfsensorOut, id: [4], label: moment-p}
+      - { key: rfu_ref_lfsensorOut, id: [5], label: moment-r}
+    bottom_label:
+    newline: false
+
   leg ServoState:
     legends:
       - { key: ServoState, id: [0], label: r-hip-y  }

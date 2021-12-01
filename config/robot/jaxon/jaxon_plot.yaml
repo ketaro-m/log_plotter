@@ -115,6 +115,14 @@ rfu_ref_lhsensorOut:
   data:
     - { log: rfu_ref_lhsensorOut, column: [0-5] }
 
+rfu_ref_rfsensorOut:
+  data:
+    - { log: rfu_ref_rfsensorOut, column: [0-5] }
+
+rfu_ref_lfsensorOut:
+  data:
+    - { log: rfu_ref_lfsensorOut, column: [0-5] }
+
 current:
   func: plot_current
   data:
