@@ -4,14 +4,14 @@ extend:
 main:
   rarm q:
     legends:
-      - { key: st_q, id: [17],label: st_collar-y }
-      - { key: st_q, id: [18],label: st_shoulder-p }
-      - { key: st_q, id: [19],label: st_shoulder-r }
-      - { key: st_q, id: [20],label: st_shoulder-y }
-      - { key: st_q, id: [21],label: st_elbow-p }
-      - { key: st_q, id: [22],label: st_wrist-y }
-      - { key: st_q, id: [23],label: st_wrist-r }
-      - { key: st_q, id: [24],label: st_wrist-p }
+      # - { key: st_q, id: [17],label: st_collar-y }
+      # - { key: st_q, id: [18],label: st_shoulder-p }
+      # - { key: st_q, id: [19],label: st_shoulder-r }
+      # - { key: st_q, id: [20],label: st_shoulder-y }
+      # - { key: st_q, id: [21],label: st_elbow-p }
+      # - { key: st_q, id: [22],label: st_wrist-y }
+      # - { key: st_q, id: [23],label: st_wrist-r }
+      # - { key: st_q, id: [24],label: st_wrist-p }
       - { key: abc_q, id: [17],label: abc_collar-y }
       - { key: abc_q, id: [18],label: abc_shoulder-p }
       - { key: abc_q, id: [19],label: abc_shoulder-r }
@@ -65,14 +65,14 @@ main:
       - { key: st_q, id: [30], label: st_wrist-y }
       - { key: st_q, id: [31], label: st_wrist-r }
       - { key: st_q, id: [32], label: st_wrist-p }
-      - { key: abc_q, id: [25],  label: abc_collar-y }
-      - { key: abc_q, id: [26],  label: abc_shoulder-p }
-      - { key: abc_q, id: [27],  label: abc_shoulder-r }
-      - { key: abc_q, id: [28],  label: abc_shoulder-y }
-      - { key: abc_q, id: [29], label: abc_elbow-p }
-      - { key: abc_q, id: [30], label: abc_wrist-y }
-      - { key: abc_q, id: [31], label: abc_wrist-r }
-      - { key: abc_q, id: [32], label: abc_wrist-p }
+      # - { key: abc_q, id: [25],  label: abc_collar-y }
+      # - { key: abc_q, id: [26],  label: abc_shoulder-p }
+      # - { key: abc_q, id: [27],  label: abc_shoulder-r }
+      # - { key: abc_q, id: [28],  label: abc_shoulder-y }
+      # - { key: abc_q, id: [29], label: abc_elbow-p }
+      # - { key: abc_q, id: [30], label: abc_wrist-y }
+      # - { key: abc_q, id: [31], label: abc_wrist-r }
+      # - { key: abc_q, id: [32], label: abc_wrist-p }
       - { key: abst_q, id: [25],  label: abst_collar-y }
       - { key: abst_q, id: [26],  label: abst_shoulder-p }
       - { key: abst_q, id: [27],  label: abst_shoulder-r }
