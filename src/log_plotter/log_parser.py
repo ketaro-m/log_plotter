@@ -10,7 +10,7 @@ from log_plotter.graph_legend import expand_str_to_list
 
 class LogParser(object):
 
-    def __init__(self, fname, plot_conf, layout_conf, read_yaml = True):
+    def __init__(self, fname, plot_conf, layout_conf, read_yaml = True, start_idx = 0, data_length = 0):
         '''
         :param str fname: file name of log
         :param str/dict plot_conf: plot yaml file name / dict loaded from plot.yaml
@@ -38,6 +38,8 @@ class LogParser(object):
             self.layout_dict[dict_title].setdefault('bottom_label', "time [s]")
 
         self.dataListDict = {}
+        self.start_idx = start_idx
+        self.data_length = data_length
 
     def readData(self):
         '''
@@ -57,6 +59,7 @@ class LogParser(object):
 
         # store data in parallel
         fname_list = replaceRHString([self.fname + '.' + ext for ext in topic_list])
+        fname_list = map(lambda fn: [fn, self.start_idx, self.data_length], fname_list) ## add start_idx, data_length
         pl = multiprocessing.Pool()
         data_list = pl.map(readOneTopic, fname_list)
         for topic, data in zip(topic_list, data_list):
@@ -67,6 +70,7 @@ class LogParser(object):
             if data is not None: self.dataListDict[log_name][:, 0] = data[:, 0] - min_time
         # convert servoState from int to float
         if 'RobotHardware0_servoState' in topic_list:
-            ss_tmp = self.dataListDict['RobotHardware0_servoState'][:, 1:]
-            self.dataListDict['RobotHardware0_servoState'][:, 1:] = numpy.fromstring(ss_tmp.astype('i').tostring(), dtype='f').reshape(ss_tmp.shape)
+            if self.dataListDict['RobotHardware0_servoState'] is not None:
+                ss_tmp = self.dataListDict['RobotHardware0_servoState'][:, 1:]
+                self.dataListDict['RobotHardware0_servoState'][:, 1:] = numpy.fromstring(ss_tmp.astype('i').tostring(), dtype='f').reshape(ss_tmp.shape)
         return self.dataListDict
