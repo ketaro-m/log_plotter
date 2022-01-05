@@ -107,6 +107,38 @@ rmfo_off_lhsensor:
   data:
     - { log: rmfo_off_lhsensor, column: [0-5] }
 
+rmfo_off_abs_rfsensor:
+  data:
+    - { log: rmfo_off_abs_rfsensor, column: [0-5] }
+
+rmfo_off_abs_lfsensor:
+  data:
+    - { log: rmfo_off_abs_lfsensor, column: [0-5] }
+
+rmfo_off_abs_rhsensor:
+  data:
+    - { log: rmfo_off_abs_rhsensor, column: [0-5] }
+
+rmfo_off_abs_lhsensor:
+  data:
+    - { log: rmfo_off_abs_lhsensor, column: [0-5] }
+
+sh_rfsensorOut:
+  data:
+    - { log: sh_rfsensorOut, column: [0-5] }
+
+sh_lfsensorOut:
+  data:
+    - { log: sh_lfsensorOut, column: [0-5] }
+
+sh_rhsensorOut:
+  data:
+    - { log: sh_rhsensorOut, column: [0-5] }
+
+sh_lhsensorOut:
+  data:
+    - { log: sh_lhsensorOut, column: [0-5] }
+
 rfu_ref_rfsensorOut:
   data:
     - { log: rfu_ref_rfsensorOut, column: [0-5] }
@@ -122,6 +154,38 @@ rfu_ref_rhsensorOut:
 rfu_ref_lhsensorOut:
   data:
     - { log: rfu_ref_lhsensorOut, column: [0-5] }
+
+es_rfsensorOut:
+  data:
+    - { log: es_rfsensorOut, column: [0-5] }
+
+es_lfsensorOut:
+  data:
+    - { log: es_lfsensorOut, column: [0-5] }
+
+es_rhsensorOut:
+  data:
+    - { log: es_rhsensorOut, column: [0-5] }
+
+es_lhsensorOut:
+  data:
+    - { log: es_lhsensorOut, column: [0-5] }
+
+sbp_ref_rfsensorOut:
+  data:
+    - { log: abc_sbp_ref_rfsensorOut, column: [0-5] }
+
+sbp_ref_lfsensorOut:
+  data:
+    - { log: abc_sbp_ref_lfsensorOut, column: [0-5] }
+
+sbp_ref_rhsensorOut:
+  data:
+    - { log: abc_sbp_ref_rhsensorOut, column: [0-5] }
+
+sbp_ref_lhsensorOut:
+  data:
+    - { log: abc_sbp_ref_lhsensorOut, column: [0-5] }
 
 current:
   func: plot_current
