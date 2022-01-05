@@ -1,0 +1,106 @@
+main:
+  abs ref cog/zmp x:
+    legends:
+      - { key: tmp, id: [0], label: "ref_zmp"} # ref_zmp
+      - { key: tmp, id: [2], label: "ref_dcm"} # ref_dcm
+      - { key: tmp, id: [13], label: "new_ref_zmp_orig"} # act_cp
+      - { key: tmp, id: [4], label: "new_ref_zmp"} # new_ref_zmp
+      - { key: tmp, id: [6], label: "new_ref_cp"} # new_ref_cp
+      - { key: tmp, id: [8], label: "act_cp"} # act_cp
+      # - { key: tmp, id: [21], label: "act_zmp"} # act_zmp
+      - { key: tmp, id: [10], label: "feedforward_zmp_orig"}
+      - { key: tmp, id: [23], label: "feedforward_zmp"}
+      - { key: tmp, id: [19], label: "cog wo dc"}
+      - { key: abc_cogOut, id: [0]} # new_ref_cog
+      - { key: current_landing_pos, id: [0], label: "landing pos"}
+    newline: false
+
+  abs ref cog/zmp z:
+    legends:
+      - { key: tmp, id: [1], label: "ref_zmp"} # ref_zp
+      - { key: tmp, id: [3], label: "ref_dcm"} # ref_dm
+      - { key: tmp, id: [14], label: "new_ref_zmp_orig"} # act_cp
+      - { key: tmp, id: [5], label: "new_ref_zmp"} # nf_zmp
+      - { key: tmp, id: [7], label: "new_ref_cp"} # net_cp
+      - { key: tmp, id: [9], label: "act_cp"} # act_cp
+      # - { key: tmp, id: [22], label: "act_zmp"} # act_zmp
+      - { key: tmp, id: [12], label: "feedforward_zmp_orig"}
+      - { key: tmp, id: [24], label: "feedforward_zmp"}
+      - { key: tmp, id: [20], label: "cog wo dc"}
+      - { key: abc_cogOut, id: [1]} # new_ref_cog
+      - { key: current_landing_pos, id: [1], label: "landing pos"}
+    newline: false
+
+  # abs landing pos:
+  #   legends:
+  #     - { key: abc_cogOut, id: [2]} # new_ref_cog
+  #     - { key: current_landing_pos, id: [2], label: "landing pos"}
+
+  # act/ref cog velocity:
+  #   legends:
+  #     - { key: abc_originActCogVel, id: [0-2]}
+  #     - { key: abc_originRefCogVel, id: [0-2]}
+
+  # flywheel:
+  #   legends:
+  #     - { key: tmp, id: [12]} # flywheel_tau r
+  #     - { key: tmp, id: [13]} # flywheel_tau p
+  #   newline: false
+
+  # momentum:
+  #   legends:
+  #     - { key: tmp, id: [25]} # momentum r
+  #     - { key: tmp, id: [26]} # momentum r
+  #   newline: false
+
+  # step time:
+  #   legends:
+  #     - { key: tmp, id: [10] } # double_time
+  #     - { key: tmp, id: [11] } # time
+
+  act/ref force:
+    legends:
+      - { key: rmfo_off_rfsensor, id: [2] }
+      - { key: rmfo_off_lfsensor, id: [2] }
+      - { key: tmp, id: [11], label: "remain_time"} # time
+
+  # ST cog/zmp:
+  #   legends:
+  #     - { key: abc_originActCog, id: [0-2]}
+  #     - { key: abc_originRefCog, id: [0-2]}
+  #     - { key: abc_originActZmp, id: [0-2]}
+  #     - { key: abc_originRefZmp, id: [0-2]}
+  #     - { key: abc_originNewZmp, id: [0-2]}
+
+  # # rleg swing comp:
+  # #   legends:
+  # #     - { key: swing_comp, id: [0-5] }
+
+  # # lleg swing comp:
+  # #   legends:
+  # #     - { key: swing_comp, id: [6-11] }
+
+  # # rarm swing comp:
+  # #   legends:
+  # #     - { key: swing_comp, id: [12-17] }
+
+  # # larm swing comp:
+  # #   legends:
+  # #     - { key: swing_comp, id: [18-23] }
+
+  # # falling direction:
+  # #   legends:
+  # #     - { key: tmp, id: [14] }
+  # #   newline: false
+
+  # dc fx:
+  #   legends:
+  #     # - { key: tmp, id: [15], label: "raw dc fx"}
+  #     - { key: tmp, id: [17], label: "filterd dc fx"}
+  #   newline: false
+
+  # dc fy:
+  #   legends:
+  #     # - { key: tmp, id: [16], label: "raw dc fy"}
+  #     - { key: tmp, id: [18], label: "filterd dc fy"}
+  #   newline: false

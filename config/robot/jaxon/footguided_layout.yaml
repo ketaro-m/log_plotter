@@ -29,6 +29,7 @@ main:
 
   abs landing pos:
     legends:
+      - { key: abc_cogOut, id: [2]} # new_ref_cog
       - { key: current_landing_pos, id: [2], label: "landing pos"}
 
   act/ref cog velocity:
