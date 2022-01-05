@@ -1,0 +1,115 @@
+main:
+  force x:
+    legends:
+      # - { key: rfu_ref_rhsensorOut, id: [0], label: rfu-rh}
+      # - { key: rfu_ref_lhsensorOut, id: [0], label: rfu-lh}
+      - { key: es_rhsensorOut, id: [0], label: es-rh}
+      - { key: es_lhsensorOut, id: [0], label: es-lh}
+      - { key: rmfo_off_abs_rhsensor, id: [0], label: off-rh}
+      - { key: rmfo_off_abs_lhsensor, id: [0], label: off-lh}
+      - { key: sh_rhsensorOut, id: [0], label: sh-ref-rh}
+      - { key: sh_lhsensorOut, id: [0], label: sh-ref-lh}
+      - { key: sbp_ref_rhsensorOut, id: [0], label: sbp-ref-rh}
+      - { key: sbp_ref_lhsensorOut, id: [0], label: sbp-ref-lh}
+    bottom_label:
+    newline: false
+
+  force y:
+    legends:
+      # - { key: rfu_ref_rhsensorOut, id: [1], label: rfu-rh}
+      # - { key: rfu_ref_lhsensorOut, id: [1], label: rfu-lh}
+      - { key: es_rhsensorOut, id: [1], label: es-rh}
+      - { key: es_lhsensorOut, id: [1], label: es-lh}
+      - { key: rmfo_off_abs_rhsensor, id: [1], label: off-rh}
+      - { key: rmfo_off_abs_lhsensor, id: [1], label: off-lh}
+      - { key: sh_rhsensorOut, id: [1], label: sh-ref-rh}
+      - { key: sh_lhsensorOut, id: [1], label: sh-ref-lh}
+      - { key: sbp_ref_rhsensorOut, id: [1], label: sbp-ref-rh}
+      - { key: sbp_ref_lhsensorOut, id: [1], label: sbp-ref-lh}
+    bottom_label:
+    newline: false
+
+  force z:
+    legends:
+      # - { key: rfu_ref_rhsensorOut, id: [2], label: rfu-rh}
+      # - { key: rfu_ref_lhsensorOut, id: [2], label: rfu-lh}
+      - { key: es_rhsensorOut, id: [2], label: es-rh}
+      - { key: es_lhsensorOut, id: [2], label: es-lh}
+      - { key: rmfo_off_abs_rhsensor, id: [2], label: off-rh}
+      - { key: rmfo_off_abs_lhsensor, id: [2], label: off-lh}
+      - { key: sh_rhsensorOut, id: [2], label: sh-ref-rh}
+      - { key: sh_lhsensorOut, id: [2], label: sh-ref-lh}
+      - { key: sbp_ref_rhsensorOut, id: [2], label: sbp-ref-rh}
+      - { key: sbp_ref_lhsensorOut, id: [2], label: sbp-ref-lh}
+    bottom_label:
+
+  moment r:
+    legends:
+      # - { key: rfu_ref_rhsensorOut, id: [3], label: rfu-rh}
+      # - { key: rfu_ref_lhsensorOut, id: [3], label: rfu-lh}
+      - { key: es_rhsensorOut, id: [3], label: es-rh}
+      - { key: es_lhsensorOut, id: [3], label: es-lh}
+      - { key: rmfo_off_abs_rhsensor, id: [3], label: off-rh}
+      - { key: rmfo_off_abs_lhsensor, id: [3], label: off-lh}
+      - { key: sh_rhsensorOut, id: [3], label: sh-ref-rh}
+      - { key: sh_lhsensorOut, id: [3], label: sh-ref-lh}
+      - { key: sbp_ref_rhsensorOut, id: [3], label: sbp-ref-rh}
+      - { key: sbp_ref_lhsensorOut, id: [3], label: sbp-ref-lh}
+    bottom_label:
+    newline: false
+
+  moment p:
+    legends:
+      # - { key: rfu_ref_rhsensorOut, id: [4], label: rfu-rh}
+      # - { key: rfu_ref_lhsensorOut, id: [4], label: rfu-lh}
+      - { key: es_rhsensorOut, id: [4], label: es-rh}
+      - { key: es_lhsensorOut, id: [4], label: es-lh}
+      - { key: rmfo_off_abs_rhsensor, id: [4], label: off-rh}
+      - { key: rmfo_off_abs_lhsensor, id: [4], label: off-lh}
+      - { key: sh_rhsensorOut, id: [4], label: sh-ref-rh}
+      - { key: sh_lhsensorOut, id: [4], label: sh-ref-lh}
+      - { key: sbp_ref_rhsensorOut, id: [4], label: sbp-ref-rh}
+      - { key: sbp_ref_lhsensorOut, id: [4], label: sbp-ref-lh}
+    bottom_label:
+    newline: false
+
+  moment y:
+    legends:
+      # - { key: rfu_ref_rhsensorOut, id: [5], label: rfu-rh}
+      # - { key: rfu_ref_lhsensorOut, id: [5], label: rfu-lh}
+      - { key: es_rhsensorOut, id: [5], label: es-rh}
+      - { key: es_lhsensorOut, id: [5], label: es-lh}
+      - { key: rmfo_off_abs_rhsensor, id: [5], label: off-rh}
+      - { key: rmfo_off_abs_lhsensor, id: [5], label: off-lh}
+      - { key: sh_rhsensorOut, id: [5], label: sh-ref-rh}
+      - { key: sh_lhsensorOut, id: [5], label: sh-ref-lh}
+      - { key: sbp_ref_rhsensorOut, id: [5], label: sbp-ref-rh}
+      - { key: sbp_ref_lhsensorOut, id: [5], label: sbp-ref-lh}
+    bottom_label:
+
+  abs ref cog/zmp x:
+    legends:
+      - { key: tmp, id: [0], label: "ref_zmp"} # ref_zmp
+      - { key: tmp, id: [2], label: "ref_dcm"} # ref_dcm
+      - { key: tmp, id: [4], label: "new_ref_zmp"} # new_ref_zmp
+      - { key: tmp, id: [6], label: "new_ref_cp"} # new_ref_cp
+      - { key: tmp, id: [8], label: "act_cp"} # act_cp
+      - { key: tmp, id: [21], label: "act_zmp"} # act_zmp
+      # - { key: tmp, id: [23], label: "feedforward_zmp"}
+      - { key: tmp, id: [19], label: "cog wo dc"}
+      - { key: abc_cogOut, id: [0]} # new_ref_cog
+      - { key: current_landing_pos, id: [0], label: "landing pos"}
+    newline: false
+
+  abs ref cog/zmp y:
+    legends:
+      - { key: tmp, id: [1], label: "ref_zmp"} # ref_zp
+      - { key: tmp, id: [3], label: "ref_dcm"} # ref_dm
+      - { key: tmp, id: [5], label: "new_ref_zmp"} # nf_zmp
+      - { key: tmp, id: [7], label: "new_ref_cp"} # net_cp
+      - { key: tmp, id: [9], label: "act_cp"} # act_cp
+      - { key: tmp, id: [22], label: "act_zmp"} # act_zmp
+      # - { key: tmp, id: [24], label: "feedforward_zmp"}
+      - { key: tmp, id: [20], label: "cog wo dc"}
+      - { key: abc_cogOut, id: [1]} # new_ref_cog
+      - { key: current_landing_pos, id: [1], label: "landing pos"}
