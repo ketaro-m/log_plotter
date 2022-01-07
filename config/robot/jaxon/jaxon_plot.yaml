@@ -230,6 +230,9 @@ motor_outer_temp:
   data:
     - { log: RobotHardware0_servoState, column: [0-33] }
 
+es_flag:
+  data:
+    - { log: es_emergencyMode, column: [0] }
 
 watt:
   func: plot_watt

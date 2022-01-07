@@ -113,3 +113,8 @@ main:
       - { key: tmp, id: [20], label: "cog wo dc"}
       - { key: abc_cogOut, id: [1]} # new_ref_cog
       - { key: current_landing_pos, id: [1], label: "landing pos"}
+    newline: false
+
+  es flag:
+    legends:
+      - { key: es_flag, id: [0], label: es-flag}
