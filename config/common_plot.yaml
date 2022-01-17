@@ -65,6 +65,9 @@ abs_refzmp:
 st_zmp:
   data:
     - { log: st_zmp, column: [0-2] }
+sbp_cog_offset:
+  data:
+    - { log: abc_sbpCogOffset, column: [0-2] }
 ## force
 sh_rfsensorOut:
   data:

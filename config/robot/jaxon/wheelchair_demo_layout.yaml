@@ -87,34 +87,52 @@ main:
       - { key: sbp_ref_lhsensorOut, id: [5], label: sbp-ref-lh}
     bottom_label:
 
-  abs ref cog/zmp x:
+  ST cog/zmp:
     legends:
-      - { key: tmp, id: [0], label: "ref_zmp"} # ref_zmp
-      - { key: tmp, id: [2], label: "ref_dcm"} # ref_dcm
-      - { key: tmp, id: [4], label: "new_ref_zmp"} # new_ref_zmp
-      - { key: tmp, id: [6], label: "new_ref_cp"} # new_ref_cp
-      - { key: tmp, id: [8], label: "act_cp"} # act_cp
-      - { key: tmp, id: [21], label: "act_zmp"} # act_zmp
-      # - { key: tmp, id: [23], label: "feedforward_zmp"}
-      - { key: tmp, id: [19], label: "cog wo dc"}
-      - { key: abc_cogOut, id: [0]} # new_ref_cog
-      - { key: current_landing_pos, id: [0], label: "landing pos"}
-    newline: false
+      - { key: abc_originActCog, id: [0-2]}
+      - { key: abc_originRefCog, id: [0-2]}
+      - { key: abc_originActZmp, id: [0-2]}
+      - { key: abc_originRefZmp, id: [0-2]}
+      - { key: abc_originNewZmp, id: [0-2]}
+      - { key: abc_RefCp, id: [0-2]}
+      - { key: abc_ActCp, id: [0-2]}
 
-  abs ref cog/zmp y:
-    legends:
-      - { key: tmp, id: [1], label: "ref_zmp"} # ref_zp
-      - { key: tmp, id: [3], label: "ref_dcm"} # ref_dm
-      - { key: tmp, id: [5], label: "new_ref_zmp"} # nf_zmp
-      - { key: tmp, id: [7], label: "new_ref_cp"} # net_cp
-      - { key: tmp, id: [9], label: "act_cp"} # act_cp
-      - { key: tmp, id: [22], label: "act_zmp"} # act_zmp
-      # - { key: tmp, id: [24], label: "feedforward_zmp"}
-      - { key: tmp, id: [20], label: "cog wo dc"}
-      - { key: abc_cogOut, id: [1]} # new_ref_cog
-      - { key: current_landing_pos, id: [1], label: "landing pos"}
-    newline: false
+
+  # abs ref cog/zmp x:
+  #   legends:
+  #     - { key: tmp, id: [0], label: "ref_zmp"} # ref_zmp
+  #     - { key: tmp, id: [2], label: "ref_dcm"} # ref_dcm
+  #     - { key: tmp, id: [4], label: "new_ref_zmp"} # new_ref_zmp
+  #     - { key: tmp, id: [6], label: "new_ref_cp"} # new_ref_cp
+  #     - { key: tmp, id: [8], label: "act_cp"} # act_cp
+  #     - { key: tmp, id: [21], label: "act_zmp"} # act_zmp
+  #     # - { key: tmp, id: [23], label: "feedforward_zmp"}
+  #     - { key: tmp, id: [19], label: "cog wo dc"}
+  #     - { key: abc_cogOut, id: [0]} # new_ref_cog
+  #     - { key: current_landing_pos, id: [0], label: "landing pos"}
+  #   newline: false
+
+  # abs ref cog/zmp y:
+  #   legends:
+  #     - { key: tmp, id: [1], label: "ref_zmp"} # ref_zp
+  #     - { key: tmp, id: [3], label: "ref_dcm"} # ref_dm
+  #     - { key: tmp, id: [5], label: "new_ref_zmp"} # nf_zmp
+  #     - { key: tmp, id: [7], label: "new_ref_cp"} # net_cp
+  #     - { key: tmp, id: [9], label: "act_cp"} # act_cp
+  #     - { key: tmp, id: [22], label: "act_zmp"} # act_zmp
+  #     # - { key: tmp, id: [24], label: "feedforward_zmp"}
+  #     - { key: tmp, id: [20], label: "cog wo dc"}
+  #     - { key: abc_cogOut, id: [1]} # new_ref_cog
+  #     - { key: current_landing_pos, id: [1], label: "landing pos"}
+  #   newline: false
 
   es flag:
     legends:
       - { key: es_flag, id: [0], label: es-flag}
+    newline: false
+
+  sbp cog offset:
+    legends:
+      - { key: sbp_cog_offset, id: [0]}
+      - { key: sbp_cog_offset, id: [1]}
+      - { key: sbp_cog_offset, id: [2]}
