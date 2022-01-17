@@ -136,6 +136,54 @@ class PlotMethod(object):
         plot_item.plot(times, data, pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=2, style=PlotMethod.linetypes["style"][i]), name=key)
 
     @staticmethod
+    def plot_cp(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
+        cogx = data_dict[logs[0]][:, log_cols[0]] # cog x
+        height = data_dict[logs[1]][:, log_cols[1]] # cog height
+        vel = data_dict[logs[2]][:, log_cols[2]]    # cog velocity
+        g = 9.80665
+        omega = numpy.sqrt(g / height)
+        data = vel / omega + cogx
+        plot_item.plot(times, data, pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=1.5, style=PlotMethod.linetypes["style"][i]), name=key)
+
+    @staticmethod
+    def plot_cp_add_const(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
+        cogx = data_dict[logs[0]][:, log_cols[0]] # cog x
+        height = data_dict[logs[1]][:, log_cols[1]] # cog height
+        vel = data_dict[logs[2]][:, log_cols[2]]    # cog velocity
+        g = 9.80665
+        omega = numpy.sqrt(g / height)
+        data_addend = -0.0184
+        data = vel / omega + cogx + data_addend
+        plot_item.plot(times, data, pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=1.5, style=PlotMethod.linetypes["style"][i]), name=key)
+
+    @staticmethod
+    def plot_cp_diff(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
+        actcogx = data_dict[logs[0]][:, log_cols[0]] # cog x
+        refcogx = data_dict[logs[3]][:, log_cols[3]] # cog x
+        actheight = data_dict[logs[1]][:, log_cols[1]] # cog height
+        refheight = data_dict[logs[4]][:, log_cols[4]] # cog height
+        actvel = data_dict[logs[2]][:, log_cols[2]]    # cog velocity
+        refvel = data_dict[logs[5]][:, log_cols[5]]    # cog velocity
+        g = 9.80665
+        actomega = numpy.sqrt(g / actheight)
+        refomega = numpy.sqrt(g / refheight)
+        data = (actvel / actomega + actcogx)  - (refvel / refomega + refcogx)
+        plot_item.plot(times, data, pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=1.5, style=PlotMethod.linetypes["style"][i]), name=key)
+
+    @staticmethod
+    def plot_cog_with_sbp(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
+        M = 130.442
+        g = 9.80665
+        cogx = data_dict[logs[0]][:, log_cols[0]]
+        cog_offset = data_dict[logs[0]][0, log_cols[0]]
+        rleg_posx = data_dict[logs[1]][:, log_cols[1]] / 1000.0
+        lleg_posx = data_dict[logs[2]][:, log_cols[2]] / 1000.0
+        rleg_forcez = data_dict[logs[3]][:, log_cols[3]]
+        lleg_forcez = data_dict[logs[4]][:, log_cols[4]]
+        data = cogx + cogx - (M * g * cogx - rleg_posx * rleg_forcez - lleg_posx * lleg_forcez) / (M * g - rleg_forcez - lleg_forcez) - cog_offset
+        plot_item.plot(times, data, pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=1.5, style=PlotMethod.linetypes["style"][i]), name=key)
+
+    @staticmethod
     def plot_rad2deg_diff(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
         plot_item.plot(times, [math.degrees(x) for x in (data_dict[logs[1]][:, log_cols[1]] - data_dict[logs[0]][:, log_cols[0]])],
                        pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=2, style=PlotMethod.linetypes["style"][i]), name=key)

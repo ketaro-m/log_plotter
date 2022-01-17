@@ -159,30 +159,30 @@ time:
   data:
     - { log: sh_qOut, column: [0]}
 # cp
-st_ActCp:
+abc_ActCp:
   func: plot_cp
   data:
-    - { log: st_originActCog, column: [0-1] }
-    - { log: st_originActCog, column: [2,2] }
-    - { log: st_originActCogVel, column: [0-1] }
-st_RefCp:
+    - { log: abc_originActCog, column: [0-1] }
+    - { log: abc_originActCog, column: [2,2] }
+    - { log: abc_originActCogVel, column: [0-1] }
+abc_RefCp:
   func: plot_cp
   data:
-    - { log: st_originRefCog, column: [0-1] }
-    - { log: st_originRefCog, column: [2,2] }
-    - { log: st_originRefCogVel, column: [0-1] }
-st_ActCp_add_const:
+    - { log: abc_originRefCog, column: [0-1] }
+    - { log: abc_originRefCog, column: [2,2] }
+    - { log: abc_originRefCogVel, column: [0-1] }
+abc_ActCp_add_const:
   func: plot_cp_add_const
   data:
-    - { log: st_originActCog, column: [0-1] }
-    - { log: st_originActCog, column: [2,2] }
-    - { log: st_originActCogVel, column: [0-1] }
-st_RefCp_add_const:
+    - { log: abc_originActCog, column: [0-1] }
+    - { log: abc_originActCog, column: [2,2] }
+    - { log: abc_originActCogVel, column: [0-1] }
+abc_RefCp_add_const:
   func: plot_cp_add_const
   data:
-    - { log: st_originRefCog, column: [0-1] }
-    - { log: st_originRefCog, column: [2,2] }
-    - { log: st_originRefCogVel, column: [0-1] }
+    - { log: abc_originRefCog, column: [0-1] }
+    - { log: abc_originRefCog, column: [2,2] }
+    - { log: abc_originRefCogVel, column: [0-1] }
 # diff
 cog_diff:
   func: plot_diff
