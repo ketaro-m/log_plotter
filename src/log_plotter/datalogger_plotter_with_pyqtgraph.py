@@ -38,7 +38,7 @@ class LogPlotter(object):
         self.plotItemOrig = {}
         # default font style
         self.font_type = 'Times New Roman'
-        self.font_size = 9
+        self.font_size = 10.5
         self.font_color = 'black'
         #
         self.start_idx = start_idx
@@ -75,7 +75,7 @@ class LogPlotter(object):
                 self.legend_list[graph_row].append([])
                 if group['title']:
                     plot_item.setTitle(title+" "+ (str(j) if group_len != 1 else ""))
-                plot_item.showGrid(x=True, y=True, alpha=1)
+                plot_item.showGrid(x=True, y=True, alpha=0.2)
                 if 'downsampling' in group.keys():
                     plot_item.setDownsampling(ds = group['downsampling'].get('ds', 100),
                                               auto=group['downsampling'].get('auto', False),
