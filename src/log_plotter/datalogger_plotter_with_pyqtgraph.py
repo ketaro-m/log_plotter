@@ -38,7 +38,7 @@ class LogPlotter(object):
         self.plotItemOrig = {}
         # default font style
         self.font_type = 'Times New Roman'
-        self.font_size = 10.5
+        self.font_size = 8.5
         self.font_color = 'black'
         #
         self.start_idx = start_idx

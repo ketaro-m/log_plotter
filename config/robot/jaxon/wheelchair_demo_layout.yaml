@@ -41,6 +41,8 @@ main:
       - { key: sh_lhsensorOut, id: [2], label: sh-ref-lh}
       - { key: sbp_ref_rhsensorOut, id: [2], label: sbp-ref-rh}
       - { key: sbp_ref_lhsensorOut, id: [2], label: sbp-ref-lh}
+      - { key: sh_rfsensorOut, id: [2], label: sbp-ff-rh}
+      - { key: sh_lfsensorOut, id: [2], label: sbp-ff-lh}
     bottom_label:
 
   moment r:
